@@ -1,0 +1,3 @@
+class NaatlyricsController < ApplicationController
+ 
+end

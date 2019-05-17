@@ -1,0 +1,277 @@
+<div class="container-fluid">
+  <div class="row">
+  	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+  		<div id="naat-frame">	
+  			<div class="tab-content">
+  				<div class="tab-pane active" id="1b">
+  					<div class="naat-frame">
+  					</div>
+  					<div class="heding">
+  						<h1>Koi Saleeqa ha Harzon ka </h1>
+  					</div>
+  				</div>
+  				<div class="tab-pane" id="2b">
+  					<div class="naat-frame">
+  					</div>
+  					<h1>Hum se koi na howa </h1>
+  				</div>
+  				<div class="tab-pane" id="3b">
+  					<div class="naat-frame">
+  					</div>
+  					<h1>Farci</h1>
+  				</div>
+  				<div class="tab-pane" id="4b">
+  					<div class="naat-frame">
+  					</div>
+  					<h1>Hum se koi na howa </h1>
+  				</div>
+  			</div>
+        <ul class="tabarea">
+          <li class="active">
+          		<a href="#1b" data-toggle="tab">
+          			Urdu
+          		</a>
+          </li>
+          <li>
+          	<a href="#2b" data-toggle="tab">
+          		English
+          	</a>
+          </li>
+          <li>
+          	<a href="#3b" data-toggle="tab">
+          		Roman
+          	</a>
+          </li>
+          <li>
+          	<a href="#3b" data-toggle="tab">
+          	 <div class="small-image-tab">
+             	</div>
+            </a>
+          </li>
+  			</ul>
+  	  </div>
+	  	<div class="discription-block">
+          <section id="demo">
+          	<h2>SoundsofKolachi</h2>
+          	<span>Published on Aug 20, 2015</span>
+          	<p>As mentioned earlier, a contingent of the ‪#SoundsofKolachi was part of the Lahooti Live Sessions (S2) recently.</p>
+        	  <article>
+              <p>From this distant vantage point, the Earth might not seem of any particular interest. But for us, it's different. Consider again that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every "superstar," every "supreme leader," every saint and sinner in the history of our species lived there – on a mote of dust suspended in a sunbeam.</p>
+            </article>
+          </section>
+          <script>
+            $('#info').readmore({
+              moreLink: '<a href="#">Usage, examples, and options</a>',
+              collapsedHeight: 14,
+              afterToggle: function(trigger, element, expanded) {
+                if(! expanded) { // The "Close" link was clicked
+                  $('html, body').animate({scrollTop: element.offset().top}, {duration: 100});
+                }
+              }
+            });
+
+            $('article').readmore({speed: 500});
+          </script>
+	  	</div>
+    </div>
+   	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+   		<ul class="video-list">
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/31.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8 text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/47.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/62.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/65.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/71.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/76.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/80.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/10.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/12.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/16.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/19.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/21.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/40.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/47.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="row">
+              <div class="col-xs-4 col-md-4 p-right-0">
+                <img src="images/22.jpg" class="img-responsive">
+              </div>
+              <div class="col-xs-8 col-md-8  text-left">
+               <strong class="video-title">Heart shaped leaf floating</strong>
+                <p>by Every Interaction</p>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>xwwww
+   	</div>
+	</div>
+</div>

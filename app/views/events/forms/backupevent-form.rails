@@ -1,0 +1,315 @@
+<%= form_for(@event, url: events_path, method: 'POST', :html => {:class => 'form go-right', style: "color: Green; padding: 20px;background-color:#FAFAFF;border-radius:0px 22px 22px 22px;"}) do |f| %>
+
+  <h2>Create New Event</h2>
+  <p>Please update your Order for more security.</p>
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="personal-info-form big-image">
+        <div class="profile-picture-holder">
+          <span class="profile-image-title">Large Picture</span>
+          <div class="profile-image">
+            <img id="image_upload_preview" src="http://placehold.it/100x100" alt="your image" class="img-responsive" />
+          </div>
+        </div>
+        <div class="fileinput-holder">
+          <div class="fileinput fileinput-new" data-provides="fileinput">
+            <span class="btn btn-default btn-file"><span>Upload Image</span>
+              <%= f.file_field :large_photo, id:'inputFile' %>
+            </span>
+            <span class="fileinput-filename"></span>
+          </div>
+          <a href="#" class="btn-remove-image">Remove Image</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="personal-info-form">
+          <div class="profile-picture-holder">
+            <span class="profile-image-title">Profile Picture</span>
+            <div class="profile-image">
+              <img id="s_image_upload_preview" src="http://placehold.it/100x100" alt="your image" class="img-responsive" />
+            </div>
+          </div>
+          <div class="fileinput-holder">
+            <div class="fileinput fileinput-new" data-provides="fileinput">
+              <span class="btn btn-default btn-file"><span>Upload Image</span>
+                <%= f.file_field :photo, id:'sinputFile' %>
+              </span>
+              <span class="fileinput-filename"></span>
+            </div>
+            <a href="#" class="btn-remove-image">Remove Image</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">  
+              <%= f.text_field :organizationsname, id:'OrganizationsName', :class =>"form-control", placeholder:'Organizations Name' %>
+              <label for="OrganizationsName">Organizations Name <span class="glyphicon glyphicon-user"> </span></label>
+            </div>     
+          </div>
+     
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <%= f.text_field :program_name, id:'ProgramName', :class =>"form-control", placeholder:'Program Name' %>
+              <label for="ProgramName">Program Name <span class="glyphicon glyphicon-user"> </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="form-group">
+        <label for="date">Date<span class="glyphicon glyphicon-calendar"></label>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="form-group">
+          <label for="Time">Time <span class="glyphicon glyphicon-user"> </span></label>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="form-group">
+          <label for="Time">DAY NIGHT <span class="glyphicon glyphicon-user"> </span></label>
+           <%= f.text_field :program_name, id:'ProgramName', :class =>"form-control", placeholder:'Program Name' %>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :client_name, id:'Clientname', :class =>"form-control", placeholder:'Client Name' %>
+        <label for="Clientname">Client Name <span class="glyphicon glyphicon-user"> </span></label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h2 class="step-second-padding">Event Address Info</h2>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :address, id:'Clientname', :class =>"form-control", placeholder:'Flat NO/House No' %>
+        <label for="Address">Flat NO/House No</label>
+      </div>     
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12 margin-bottom-none">
+      <div class="form-group">
+        <%= f.text_field :landmark, id:'LandMark', :class =>"form-control", placeholder:'Land Mark' %>
+        <label for="LandMark">Land Mark</label>
+      </div>
+    </div>
+    <p class="Pincode">(Enter Pincode/Area to pick your nearest location)<span class="glyphicon glyphicon-map-marker"></span>
+      </p>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group" >
+         <%= f.text_field :location_picker, id:'LocationPicker', :class =>"form-control", placeholder:'Location Picker' %>
+        <label for="LocationPicker">Location Picker</label>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+         <%= f.text_field :route, id:'route', :class =>"form-control", placeholder:'Route/Locality' %>
+        <label for="route">Route/Locality</label>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+         <%= f.text_field :location_picker, id:'postal_code', :class =>"form-control", placeholder:'Pin Code' %>
+        <label for="postal_code">Pin Code</label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :country, id:'country', :class =>"form-control", placeholder:'Country' %>
+        <label for="country">Country</label>
+      </div>   
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :province, id:'Province', :class =>"form-control", placeholder:'Province' %>
+        <label for="Province">Province</label>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :city, id:'City', :class =>"form-control", placeholder:'City/Town' %>
+        <label for="City">City/Town</label>
+      </div>    
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="form-group">  
+        <%= f.text_field :area_name, id:'Area_Name', :class =>"form-control", placeholder:'Area Name' %>
+        <label for="Area_Name">Area Name <span class="glyphicon glyphicon-user"> </span></label>
+      </div>     
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :facebookbook_link, id:'Facebook', :class =>"form-control", placeholder:'Facebook Address' %>
+        <label for="Facebook">Facebook Address<span class="glyphicon glyphicon-align-envelope"></label>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :twitter_link, id:'Twitter_Account', :class =>"form-control", placeholder:'Twitter Account' %>
+        <label for="Twitter_Account">Twitter Account <span class="glyphicon glyphicon-align-envelope"></label>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :whatsappno, id:'WhatsApp_no', :class =>"form-control", placeholder:'WhatsApp No' %>
+        <label for="WhatsApp_no">WhatsApp No <span class="glyphicon glyphicon-align-envelope"></label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h2 class="step-second-padding">Main Event Member’s Spicily Speech </h2>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :spicily_speech_skill, id:'speech_skill', :class =>"form-control", placeholder:'Skill Name' %>
+        <label for="speech_skill">Skill Name</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :spicily_speech_fullName, id:'Speech_fullName', :class =>"form-control", placeholder:'Full Name'%>
+        <label for="Speech_fullName">Full Name</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :spicily_speech_designation, id:'Speech_designation', :class =>"form-control", placeholder:'Special Designation'%>
+        <label for="Speech_designation">Special Designation</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <label for="Photo">Photo</label>
+      </div> 
+    </div>
+  </div>
+  <div class="row">
+    <h2 class="step-second-padding">Seekar </h2>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :speekar_skill, id:'Speekar_skill', :class =>"form-control", placeholder:'Skill Name'%>
+        <label for="Speekar_skill">Skill Name</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :speekar_fullName, id:'Speekar_fullName', :class =>"form-control", placeholder:'Full Name'%>
+        <label for="Speekar_fullName">Full Name</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+         <%= f.text_field :speekar_fullName, id:'Speekar_designation', :class =>"form-control", placeholder:'Special Designation'%>
+        <label for="Speekar_designation">Special Designation</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :speekar_photo, id:'Speekar_photo', :class =>"form-control", placeholder:'Photo'%>
+        <label for="Speekar_photo">Photo</label>
+      </div> 
+    </div>
+  </div>
+  <div class="row">
+    <h2 class="step-second-padding">started Input Filed </h2>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :guest_skill, id:'Guest_skill', :class =>"form-control", placeholder:'Skill Name'%>
+        <label for="Guest_skill">Skill Name</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :guest_fullName, id:'guest_fullName', :class =>"form-control", placeholder:'Full Name'%>
+        <label for="guest_fullName">Full Name</label>
+      </div> 
+    </div>
+    <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <input id="Guest_designation" name="event[guest_designation}" type="text" class="form-control">
+        <label for="Guest_designation">Special Designation</label>
+      </div> 
+    </div> -->
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+      
+        <label for="Guest_photo">Photo</label>
+      </div> 
+    </div>
+  </div>
+  <div class="row">
+    <h2 class="step-second-padding">Vocalist  Input Filed </h2>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :vocalist_skill, id:'Vocalist_skill', :class =>"form-control", placeholder:'Skill Name'%>
+        <label for="Vocalist_skill">Skill Name</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :vocalist_fullName, id:'vocalist_fullName', :class =>"form-control", placeholder:'Full Name'%>
+        <label for="vocalist_fullName">Full Name</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :vocalist_designation, id:'Vocalist_designation', :class =>"form-control", placeholder:'Special Designation'%>
+        <label for="Vocalist_designation">Special Designation</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <label for="Vocalist_photo">Photo</label>
+      </div> 
+    </div>
+  </div>
+  <div class="row">
+    <h2 class="step-second-padding">Sponsor (Khasosi Tawan, Manjanib) </h2>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :sponsor_fullName, id:'Sponsor_fullName', :class =>"form-control", placeholder:'Full Name'%>
+        <label for="Sponsor_fullName">Full Name</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%#= f.text_field :sponsor_designation, id:'Sponsor_designation', :class =>"form-control", placeholder:'Special Designation'%>
+        <label for="Sponsor_designation">Special Designation</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <label for="sponsor_photo">Photo</label>
+      </div> 
+    </div>
+  </div>
+  <div class="container1">
+    <button class="add_form_field">Add New Field &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+  <div class="row">
+    <h2 class="step-second-padding">Sponsor (Khasosi Tawan, Manjanib) </h2>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%= f.text_field :sponsor_fullName, id:'Sponsor_fullName', :class =>"form-control", placeholder:'Full Name'%>
+        <label for="Sponsor_fullName">Full Name</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <%#= f.text_field :sponsor_designation, id:'Sponsor_designation', :class =>"form-control", placeholder:'Special Designation'%>
+        <label for="Sponsor_designation">Special Designation</label>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <label for="sponsor_photo">Photo</label>
+      </div> 
+    </div>
+  </div>
+  </div>
+  <%= f.submit "Save", class: "btn-save", data: { disable_with: false } %>
+<% end %>

@@ -1,0 +1,803 @@
+<div class="single-pro-review-area mt-t-30 mg-b-15">
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-xs-12">
+    			<div class="large-image-holder">
+    			 	<%= image_tag 'blog-details/1.jpg' %>
+    			</div>
+    		</div>
+    	</div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="profile-info-inner">
+                    <div class="profile-img">
+                        <img src="img/profile/1.jpg" alt="" />
+                        <%= image_tag 'profile/1.jpg' %>
+                        <%#= image_tag @user.photo %>
+                    </div>
+                    <div class="profile-details-hr">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+                                <div class="address-hr">
+                                    <p><b>Name</b><br /><%= @user.firstname %> <%= @user.lastname %></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+                                <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
+                                    <p><b>Department</b><br /> CSE</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+                                <div class="address-hr">
+                                    <p><b>Email ID</b><br /> <%= @user.email %></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+                                <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
+                                    <p><b>Phone</b><br /> +<%= @user.phone %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="address-hr">
+                                    <p><b>Address</b><br /> <%= @user.address %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="address-hr">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <h3>500</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="address-hr">
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <h3>900</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="address-hr">
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <h3>600</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <div class="product-payment-inner-st res-mg-t-30 analysis-progrebar-ctn">
+                    <ul id="myTabedu1" class="tab-review-design">
+                        <li class="active"><a href="#description">Activity</a></li>
+                        <li><a href="#reviews"> Biography</a></li>
+                        <li><a href="#INFORMATION">Update Details</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content custom-product-edit st-prf-pro">
+                        <div class="product-tab-list tab-pane fade active in" id="description">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="review-content-section">
+                                        <div class="chat-discussion" style="height: auto">
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													<%= image_tag 'contact/1.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Michael Smith </a>
+                                                    <span class="message-date"> Mon Jan 26 2015 - 18:39:23 </span>
+                                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+													</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-success"><i class="fa fa-heart"></i> Love</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/1.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Karl Jordan </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.
+															</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-heart"></i> Love</a>
+                                                        <a class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Message</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/1.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Michael Smith </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+															</span>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/4.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Alice Jordan </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+																It uses a dictionary of over 200 Latin words.
+															</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-warning"><i class="fa fa-eye"></i> Nudge</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/1.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Mark Smith </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+																It uses a dictionary of over 200 Latin words.
+															</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-success"><i class="fa fa-heart"></i> Love</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/2.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Karl Jordan </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.
+															</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-heart"></i> Love</a>
+                                                        <a class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Message</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/3.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Michael Smith </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+															</span>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/4.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Alice Jordan </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+																It uses a dictionary of over 200 Latin words.
+															</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-heart"></i> Love</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="product-tab-list tab-pane fade" id="reviews">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="review-content-section">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                                <div class="address-hr biography">
+                                                    <p><b>Full Name</b><br /> <%= @user.firstname %></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                                <div class="address-hr biography">
+                                                    <p><b>Mobile</b><br /> <%= @user.phone %></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                                <div class="address-hr biography">
+                                                    <p><b>Email</b><br /> <%= @user.email %></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                                <div class="address-hr biography">
+                                                    <p><b>Location</b><br /> <%= @user.location %></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="content-profile">
+                                                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras
+                                                        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras
+                                                        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras
+                                                        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mg-b-15">
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="skill-title">
+                                                            <h2>Skill Set</h2>
+                                                            <hr />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-skill">
+                                                    <h2>Java</h2>
+                                                    <div class="progress progress-mini">
+                                                        <div style="width: 90%;" class="progress-bar progress-yellow"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-skill">
+                                                    <h2>Php</h2>
+                                                    <div class="progress progress-mini">
+                                                        <div style="width: 80%;" class="progress-bar progress-green"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-skill">
+                                                    <h2>Apps</h2>
+                                                    <div class="progress progress-mini">
+                                                        <div style="width: 70%;" class="progress-bar progress-blue"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-skill">
+                                                    <h2>C#</h2>
+                                                    <div class="progress progress-mini">
+                                                        <div style="width: 60%;" class="progress-bar progress-red"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mg-b-15">
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="skill-title">
+                                                            <h2>Education</h2>
+                                                            <hr />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ex-pro">
+                                                    <ul>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mg-b-15">
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="skill-title">
+                                                            <h2>Experience</h2>
+                                                            <hr />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ex-pro">
+                                                    <ul>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="skill-title">
+                                                            <h2>Subjects</h2>
+                                                            <hr />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ex-pro">
+                                                    <ul>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                        <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-tab-list tab-pane fade" id="INFORMATION">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="review-content-section">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input name="number" type="text" class="form-control" placeholder="First Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Last Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Address">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Date of Birth">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Department">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="number" class="form-control" placeholder="Pincode">
+                                                </div>
+                                                <div class="file-upload-inner ts-forms">
+                                                    <div class="input prepend-big-btn">
+                                                        <label class="icon-right" for="prepend-big-btn">
+																<i class="fa fa-download"></i>
+															</label>
+                                                        <div class="file-button">
+                                                            Browse
+                                                            <input type="file" onchange="document.getElementById('prepend-big-btn').value = this.value;">
+                                                        </div>
+                                                        <input type="text" id="prepend-big-btn" placeholder="no file selected">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group sm-res-mg-15 tbpf-res-mg-15">
+                                                    <input type="text" class="form-control" placeholder="Description">
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control">
+														<option>Select Gender</option>
+														<option>Male</option>
+														<option>Female</option>
+													</select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control">
+															<option>Select country</option>
+															<option>India</option>
+															<option>Pakistan</option>
+															<option>Amerika</option>
+															<option>China</option>
+															<option>Dubai</option>
+															<option>Nepal</option>
+														</select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control">
+															<option>Select state</option>
+															<option>Gujarat</option>
+															<option>Maharastra</option>
+															<option>Rajastan</option>
+															<option>Maharastra</option>
+															<option>Rajastan</option>
+															<option>Gujarat</option>
+														</select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control">
+															<option>Select city</option>
+															<option>Surat</option>
+															<option>Baroda</option>
+															<option>Navsari</option>
+															<option>Baroda</option>
+															<option>Surat</option>
+														</select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Website URL">
+                                                </div>
+                                                <input type="number" class="form-control" placeholder="Mobile no.">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="payment-adress mg-t-15">
+                                                    <button type="submit" class="btn btn-primary waves-effect waves-light mg-b-15">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="single-pro-review-area mt-t-30 mg-b-15">
+	<div class="container-fluid">
+		<div class="profile-banner" style="background-image: url('<%= @user.photo %>')">
+			<div class="profile-info-inner">
+				<div class="col-sm-3 avatar-container">
+					<%#= image_tag @user.photo %>
+				</div>
+				<div class="col-sm-12 profile-actions text-right">
+					<button type="button" class="btn btn-success btn-sm"><i class="fa fa-check"></i> Friends</button>
+					<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-envelope"></i> Send Message</button>
+					<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-ellipsis-v"></i></button>
+					<%= link_to " Update", edit_user_path(@user), :class=>'btn btn-primary btn-sm fa fa-pencil' %>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				
+				<div class="profile-img">
+                    <img src="img/profile/1.jpg" alt="" />
+                    <%= image_tag 'profile/1.jpg' %>
+                    <%#= image_tag @user.photo %>
+                </div>
+
+				<div class="text-center profile-details-hr">
+					<h4><%= @user.firstname %></h4>
+					
+					<h5>Administrator</h5>
+					<ul class="list-group">
+					  <li class="list-group-item">
+						<span class="badge">1,245</span>
+						Followers
+					  </li>
+					  <li class="list-group-item">
+						<span class="badge">245</span>
+						Following
+					  </li>
+					  <li class="list-group-item">
+						<span class="badge">1,245</span>
+						Tweets
+					  </li>
+					</ul>
+						
+						<!-- User button -->
+					<div class="user-button">
+						<div class="row">
+							<div class="col-lg-6 p-r-0">
+								<button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> Send Message</button>
+							</div>
+							<div class="col-lg-6">
+								<button type="button" class="btn btn-default btn-sm btn-block"><i class="fa fa-user"></i> Add as friend</button>
+							</div>
+						</div>
+					</div><!-- End div .user-button -->
+				</div>
+			</div>
+			
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+				<div class="product-payment-inner-st res-mg-t-30 analysis-progrebar-ctn">
+					<!-- Nav tab -->
+					<ul id="myTabedu1" class="tab-review-design">
+					  <li class="active">
+					  	<a href="http://hubancreative.com/projects/templates/coco/classy/profile.html#my-timeline" data-toggle="tab" aria-expanded="true"><i class="fa fa-pencil"></i> Timeline</a>
+					  </li>
+					  <li class="">
+					  	<a href="http://hubancreative.com/projects/templates/coco/classy/profile.html#about" data-toggle="tab" aria-expanded="false"><i class="fa fa-user"></i> About</a>
+					  </li>
+					  <li class="">
+					  	<a href="http://hubancreative.com/projects/templates/coco/classy/profile.html#mymessage" data-toggle="tab" aria-expanded="false"><i class="fa fa-envelope"></i> Message</a>
+					  </li>
+					</ul>
+					<!-- End nav tab -->
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<!-- Tab timeline -->
+						<div class="tab-pane animated fadeInRight active" id="my-timeline">
+							
+							<div class="review-content-section">
+								<!-- Begin timeline -->
+								<div class="the-timeline">
+									<form role="form" class="post-to-timeline">
+										<textarea class="form-control" style="height: 70px;" placeholder="Whats on your mind..."></textarea>
+										<div class="row">
+										<div class="col-sm-6">
+											<a class="btn btn-sm btn-default"><i class="fa fa-camera"></i></a>
+											<a class="btn btn-sm btn-default"><i class="fa fa-video-camera"></i></a>
+											<a class="btn btn-sm btn-default"><i class="fa fa-map-marker"></i></a>
+										</div>
+										<div class="col-sm-6 text-right"><button type="submit" class="btn btn-primary">Post</button></div>
+										</div>
+									</form>
+									<br><br>
+									<ul>
+										<li>
+											<div class="the-date">
+												<span>01</span>
+												<small>Feb</small>
+											</div>
+											<h4>Lorem ipsum dolor!</h4>
+											<p>
+											Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+											</p>
+										</li>
+										<li>
+											<div class="the-date">
+												<span>31</span>
+												<small>Jan</small>
+											</div>
+											<h4>Yohoo! you can put video here</h4>
+											<div class="videoWrapper">
+											<iframe src="./User Profile _ Coco - Responsive Bootstrap Admin Template_files/85847275.html" __idm_id__="604607489"></iframe>
+											</div>
+											<p>
+											Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+											</p>
+										</li>
+										<li>
+											<div class="the-date">
+												<span>25</span>
+												<small>Jan</small>
+											</div>
+											<h4>You also can put Soundcloud iframe here</h4>
+											<iframe src="./User Profile _ Coco - Responsive Bootstrap Admin Template_files/saved_resource.html"></iframe>
+											<p>
+											Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+											</p>
+										</li>
+										<li class="the-year"><p>2013</p></li>
+										<li>
+											<div class="the-date">
+												<span>20</span>
+												<small>Dec</small>
+											</div>
+											<p>
+											Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+											</p>
+										</li>
+										<li>
+											<div class="the-date">
+												<span>27</span>
+												<small>Nov</small>
+											</div>
+											<p>
+											Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+											</p>
+										</li>
+									</ul>
+								</div><!-- End div .the-timeline -->
+								<!-- End timeline -->
+							</div><!-- End div .review-content-section -->
+						</div><!-- End div .tab-pane -->
+						<!-- End Tab timeline -->
+						
+						<!-- Tab about -->
+						<div class="tab-pane animated fadeInRight" id="about">
+							<div class="review-content-section">
+								<h5><strong>ABOUT</strong> ME</h5>
+								<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+								</p>
+								<hr>
+								<div class="row">
+									<div class="col-sm-6">
+										<h5><strong>Personal Information</strong></h5>
+										<address>
+											<strong>Phone</strong><br>
+											<abbr title="Phone"><%= @user.phone %></abbr>
+										</address>
+										<address>
+											<abbr title="Phone"><%= @user.phone2 %></abbr>
+										</address>
+										<address>
+											<strong>Email</strong><br>
+											<a href="mailto:#"><%= @user.email%></a>
+										</address>
+										<address>
+											<strong>Alternate Email</strong><br>
+											<a href="mailto:#"><%= @user.email2%></a>
+										</address>
+										<address>
+											<strong>Website</strong><br>
+											<a href="http://r209.com/"><%= @user.website %></a>
+										</address>
+										<strong>MY SKILLS</strong> 
+										<p><%= @user.my_skills %></p>
+										<p>Vector Design</p>
+									</div>
+									<div class="col-sm-6">
+										<h5><strong>CONTACT</strong> ME</h5>
+										<address>
+											<strong>Address</strong><br>
+											<abbr ><%= @user.address %></abbr>
+										</address>
+										<p><%= @user.area %></p>
+										<p><%= @user.city %></p>
+										<p><%= @user.province %></p>
+										<p><%= @user.country %><p>
+										<div class="google-map-single">
+										</div>
+									</div>
+								</div><!-- End div .row -->
+							</div><!-- End div .review-content-section -->
+						</div><!-- End div .tab-pane -->
+						<!-- End Tab about -->
+						<!-- Tab user messages -->
+						<div class="tab-pane animated fadeInRight" id="mymessage">
+							 <div class="review-content-section">
+                                        <div class="chat-discussion" style="height: auto">
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													<%= image_tag 'contact/1.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Michael Smith </a>
+                                                    <span class="message-date"> Mon Jan 26 2015 - 18:39:23 </span>
+                                                    <span class="message-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+													</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-success"><i class="fa fa-heart"></i> Love</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/1.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Karl Jordan </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.
+															</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-heart"></i> Love</a>
+                                                        <a class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Message</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/1.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Michael Smith </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+															</span>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/4.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Alice Jordan </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+																It uses a dictionary of over 200 Latin words.
+															</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-warning"><i class="fa fa-eye"></i> Nudge</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/1.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Mark Smith </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+																It uses a dictionary of over 200 Latin words.
+															</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-success"><i class="fa fa-heart"></i> Love</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/2.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Karl Jordan </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.
+															</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-heart"></i> Love</a>
+                                                        <a class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Message</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/3.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Michael Smith </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+															</span>
+                                                </div>
+                                            </div>
+                                            <div class="chat-message">
+												<div class="profile-hdtc">
+													 <%= image_tag 'contact/4.jpg', :class=>'message-avatar'  %>
+												</div>
+                                                <div class="message">
+                                                    <a class="message-author" href="#"> Alice Jordan </a>
+                                                    <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                                    <span class="message-content">
+															All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+																It uses a dictionary of over 200 Latin words.
+															</span>
+                                                    <div class="m-t-md mg-t-10">
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-thumbs-up"></i> Like </a>
+                                                        <a class="btn btn-xs btn-default"><i class="fa fa-heart"></i> Love</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+						</div><!-- End div .tab-pane -->
+						<!-- End Tab user messages -->
+					</div><!-- End div .tab-content -->
+				</div><!-- End div .box-info -->
+			</div>
+		</div>
+	</div>
+
+</div>

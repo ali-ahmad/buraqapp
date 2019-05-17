@@ -1,0 +1,82 @@
+<%= form_for(@event, url: submit_path(@event), method: method_type(@event), :html => {:class => ' add-professors', id:'demo1-upload' }) do |f| %>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="imageupload">
+        <div class="file-tab">
+          <label class="btn-file">
+             <%#= image_tag(@user.avatar_url) if @user.large_photo? %>
+            <%#= f.file_field :large_photo, name:"image-file", :class=>'hd-pro-img' %>
+          </label>
+          <input type="hidden" name="image-url">
+        </div>
+      </div>
+      <div class="review-content-section">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="form-group alert-up-pd">
+              <div class="dropzone dropzone-custom needsclick addcourse" id="demo1-upload">
+                <div id="dropzone1" class="pro-ad addcoursepro">
+                  <div class="form-group alert-up-pd">
+                    <div class="dz-message needsclick download-custom">
+                      <i class="fa fa-download edudropnone" aria-hidden="true"></i>
+                      <h2 class="edudropnone">Drop image here or click to upload.</h2>
+                      <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
+                      </p>
+                       <%#= image_tag(@user.avatar_url) if @user.large_photo? %>
+                        <%#= f.file_field :large_photo, :class=>'hd-pro-img' %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="form-group">
+              <%= f.text_field :organizationsname, id:'OrganizationsName', :class =>"form-control", placeholder:'Organizations Name' %>
+            </div>
+            <div class="form-group">
+              <%= f.select(:program_type, [ 'Not interested', 'Confrance', 'Meeting' ], {}, { :class => 'form-control' }) %>
+            </div>
+            <div class="form-group">
+              <%= f.text_field :program_name, id:'ProgramName', :class =>"form-control", placeholder:'Program Name' %>
+            </div>
+            <div class="form-group">
+              <%#= f.select(:program_type, [ 'Select Day', 'Monday', 'Tuseday', 'Wensday', 'Thusday', 'Friday', 'Satureday', 'Sunday' ], {}, { :class => 'form-control' }) %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <%#= f.text_field :day, id:'finish', name:'finish',  :class =>"form-control", placeholder:'Date' %>
+            </div>
+          </div>
+           <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <%#= f.text_field :time, id:'finish', name:'finish',  :class =>"form-control", placeholder:'Time' %>
+            </div>
+          </div> 
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="payment-adress">
+
+
+
+              <% if @event.persisted?  %>
+                <a class="btn btn-primary waves-effect waves-light btnNext" >Next</a>
+
+                <% else %>
+                <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+
+              <% end %>
+
+
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

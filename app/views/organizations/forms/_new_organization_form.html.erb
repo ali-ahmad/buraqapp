@@ -1,0 +1,449 @@
+<div class="single-pro-review-area mt-t-30 mg-b-15">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="product-payment-inner-st">
+          <ul id="myTabedu1" class="tab-review-design">
+            <li class="active"><a href="#clientdetails">Client Details</a></li>
+            <li><a href="#organization">Organization Details</a></li>
+            <li><a href="#address"> Adderss Information</a></li>
+            <li><a href="#socialinfo">Social Information</a></li>
+          </ul>
+        <%= form_for(@organization, url: organizations_path, method: 'POST', :html => {:class => ' add-professors', id:'demo1-upload' }) do |f| %>
+            <div id="myTabContent" class="tab-content custom-product-edit">
+              <div class="product-tab-list tab-pane fade active in" id="clientdetails"> 
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="imageupload">
+                      <div class="file-tab">
+                        <label class="btn-file">
+                           <%= image_tag(@organization.avatar_url) if @organization.large_photo? %>
+                          <%= f.file_field :large_photo, name:"image-file", :class=>'hd-pro-img' %>
+                        </label>
+                        <input type="hidden" name="image-url">
+                      </div>
+                    </div>
+                
+                    <div class="review-content-section">
+                      <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                          <div class="form-group alert-up-pd">
+                            <div class="dropzone dropzone-custom needsclick addcourse" id="demo1-upload">
+                              <div id="dropzone1" class="pro-ad addcoursepro">
+                                <div class="form-group alert-up-pd">
+                                  <div class="dz-message needsclick download-custom">
+                                    <i class="fa fa-download edudropnone" aria-hidden="true"></i>
+                                    <h2 class="edudropnone">Drop image here or click to upload.</h2>
+                                    <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
+                                    </p>
+                                     <%= image_tag(@organization.avatar_url) if @organization.photo? %>
+                                      <%= f.file_field :photo, :class=>'hd-pro-img' %>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            <div class="form-group">
+                              <%= f.text_field :organization_name,  name:'organization_name', :class =>"form-control", placeholder:'Client First Name' %>
+                            </div>
+                            <div class="form-group">
+                              <%= f.text_field :ownername, id:'ownername', name:'ownername',  :class =>"form-control", placeholder:'Client Last Name' %>
+                            </div>
+                            <div class="form-group">
+                              <div class="input-mark-inner mg-b-22">
+                                <%= f.text_field :phone, id:'phone', :class =>"form-control", datamask: "(999) 999-9999",  placeholder:'Client Primary Phone' %>
+                                <span class="help-block"></span>                                  
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <%= f.telephone_field :phone2, id:'phone2', :class =>"form-control", placeholder:'Client Secondery Phone' %>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                          <div class="form-group data-custon-pick" id="data_1">
+                            <div class="input-group date">
+                              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                              <%= f.text_field :datetime, id:'finish', name:'finish',  :class =>"form-control", placeholder:'Client Date of Birth' %>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                          <div class="form-group data-custon-pick" id="data_1">
+                            <div class="input-group date">
+                              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                              <%= f.text_field :datetime, id:'finish', name:'finish',  :class =>"form-control", placeholder:'Gander' %>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="input-mark-inner mg-b-22">
+                            <%= f.text_field :phone, id:'phone', :class =>"form-control", datamask: "(999) 999-9999",  placeholder:'Client Gander' %>
+                            <span class="help-block"></span>                                  
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="input-mark-inner mg-b-22">
+                            <%= f.text_field :phone, id:'phone', :class =>"form-control", datamask: "(999) 999-9999",  placeholder:'Client Primary Phone' %>
+                            <span class="help-block"></span>                                  
+                          </div>
+                        </div>
+
+                        <div class="container1">
+                            <button class="add_form_field">Add New Field &nbsp; 
+                              <span style="font-size:16px; font-weight:bold;">+ </span>
+                            </button>
+                            <div><input type="text" name="mytext[]"></div>
+                        </div>
+
+                        <script type="text/javascript">
+                          
+
+                          $(document).ready(function() {
+                          var max_fields      = 10;
+                          var wrapper         = $(".container1"); 
+                          var add_button      = $(".add_form_field"); 
+                          
+                          var x = 1; 
+                          $(add_button).click(function(e){ 
+                              e.preventDefault();
+                              if(x < max_fields){ 
+                                  x++; 
+                                  $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="delete">Delete</a></div>'); //add input box
+                              }
+                          else
+                          {
+                          alert('You Reached the limits')
+                          }
+                          });
+                          
+                          $(wrapper).on("click",".delete", function(e){ 
+                              e.preventDefault(); $(this).parent('div').remove(); x--;
+                          })
+                      });
+                        </script>
+
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="payment-adress">
+                             <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                            <a class="btn btn-primary waves-effect waves-light btnNext" >Next</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-tab-list tab-pane fade" id="organization"> 
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="imageupload">
+                      <div class="file-tab">
+                        <label class="btn-file">
+                           <%= image_tag(@organization.avatar_url) if @organization.large_photo? %>
+                          <%= f.file_field :large_photo, name:"image-file", :class=>'hd-pro-img' %>
+                        </label>
+                        <input type="hidden" name="image-url">
+                      </div>
+                    </div>
+                    <div class="review-content-section">
+                      <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                          <div class="form-group alert-up-pd">
+                            <div class="dropzone dropzone-custom needsclick addcourse" id="demo1-upload">
+                              <div id="dropzone1" class="pro-ad addcoursepro">
+                                <div class="form-group alert-up-pd">
+                                  <div class="dz-message needsclick download-custom">
+                                    <i class="fa fa-download edudropnone" aria-hidden="true"></i>
+                                    <h2 class="edudropnone">Drop image here or click to upload.</h2>
+                                    <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
+                                    </p>
+                                     <%= image_tag(@organization.avatar_url) if @organization.photo? %>
+                                      <%= f.file_field :photo, :class=>'hd-pro-img' %>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                          <div class="form-group">
+                            <%= f.text_field :organization_name,  name:'organization_name', :class =>"form-control", placeholder:'Organization Name' %>
+                          </div>
+                          <div class="form-group">
+                            <%= f.text_field :ownername, id:'ownername', name:'ownername',  :class =>"form-control", placeholder:'Organizer name' %>
+                          </div>
+                          <div class="form-group">
+                            <div class="input-mark-inner mg-b-22">
+                              <%= f.text_field :phone, id:'phone', :class =>"form-control", datamask: "(999) 999-9999",  placeholder:'Primary Phone' %>
+                              <span class="help-block"></span>                                  
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <%= f.telephone_field :phone2, id:'phone2', :class =>"form-control", placeholder:'Secondery Phone' %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                          <div class="form-group data-custon-pick" id="data_1">
+                            <div class="input-group date">
+                              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                              <%= f.text_field :datetime, id:'finish', name:'finish',  :class =>"form-control", placeholder:'Establish' %>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="payment-adress">
+                             <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                            <a class="btn btn-primary waves-effect waves-light btnNext" >Next</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-tab-list tab-pane fade" id="address">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="review-content-section">
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :address, id:'Address', :class =>"form-control", placeholder:'Address' %>
+                              </div>     
+                            </div>
+                            <div class="col-md-6 col-xs-12 margin-bottom-none">
+                              <div class="form-group">
+                                <%= f.text_field :landMark, id:'LandMark', :class =>"form-control", placeholder:'Location Map' %>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :country, id:'country', :class =>"form-control", placeholder:'Country' %>
+                              </div>   
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :province, id:'Province', :class =>"form-control", placeholder:'Province' %>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :city, id:'City', :class =>"form-control", placeholder:'City/Town' %>
+                                <label for="City"></label>
+                              </div>    
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :area, id:'Area_Name', :class =>"form-control", placeholder:'Area Name' %>  
+                              </div>     
+                            </div>   
+                          </div>
+                          <div class="payment-adress">
+                            <a class="btn btn-primary waves-effect waves-light btnNext" >Next</a>
+                            <a class="btn btn-primary waves-effect waves-light btnPrevious" >Previous</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-tab-list tab-pane fade" id="socialinfo">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="review-content-section">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="devit-card-custom">
+                            <div class="row">  
+                              <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                  <%= f.email_field :email, id:'Email1', :class =>"form-control", placeholder:'Registered Email' %>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                  <%= f.email_field :email2, id:'Email2', :class =>"form-control", placeholder:'Alternate email' %>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-xs-12">
+                                <div class="form-group">  
+                                  <%= f.url_field :Websitesurl, id:'Websitesurl', :class =>"form-control", placeholder:'Websites Url' %>
+                                </div> 
+                              </div>
+                              <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                  <%= f.url_field :facebook_url, id:'Facebook Address', :class =>"form-control", placeholder:'Facebook URL' %>  
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                  <%= f.url_field :twitter_url, id:'Twitter_Account', :class =>"form-control", placeholder:'Twitter URL' %>
+                                </div>
+                              </div>
+                             
+                              <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                  <%= f.url_field :googleplus_url, id:'WhatsApp_no', :class =>"form-control", placeholder:'Google Plus Url' %>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                  <%= f.url_field :instagram_url, id:'WhatsApp_no', :class =>"form-control", placeholder:'Instagram Url' %>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                  <%= f.text_field :whatsappno, id:'WhatsApp_no', :class =>"form-control", placeholder:'Whatsapp No ' %>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="password" class="form-control" placeholder="Password">
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="password" class="form-control" placeholder="Confirm Password">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="payment-adress">
+                               <a class="btn btn-primary waves-effect waves-light btnPrevious" >Previous</a>
+                              <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  
+#dropzone1  input[type="file"] {
+      display: block;
+    height: 180px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#demo1-upload {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.imageThumb {
+  max-height: 200px;
+  border: 2px solid;
+  padding: 1px;
+  cursor: pointer;
+  width: 100%;
+  background-size: cover;
+}
+.pip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.remove {
+  display: block;
+  background: #444;
+  border: 1px solid black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.remove:hover {
+  background: white;
+}
+
+</style>
+
+
+
+<style>
+.container1 input[type=text] {
+padding:5px 0px;
+margin:5px 5px 5px 0px;
+}
+
+
+.add_form_field
+{
+    background-color: #1c97f3;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  border:1px solid #186dad;
+
+}
+
+input{
+    border: 1px solid #1c97f3;
+    width: 260px;
+    height: 40px;
+  margin-bottom:14px;
+}
+
+.delete{
+    background-color: #fd1200;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+</style>
+
+<script>
+    var $imageupload = $('.imageupload');
+    $imageupload.imageupload();
+
+    $('#imageupload-reset').on('click', function() {
+        $imageupload.imageupload('reset');
+        $(this).blur();
+    });
+
+
+</script>
+
+

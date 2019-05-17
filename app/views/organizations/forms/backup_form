@@ -1,0 +1,155 @@
+<!-- 
+<%= form_for(@organizations, url: organizations_path, method: 'POST', :html => {:class => 'form go-right', style: "color: Green; padding: 20px;background-color:#FAFAFF;border-radius:0px 22px 22px 22px;"}) do |f| %>
+
+
+
+
+  <h2>Create New Organization</h2>
+  <p>Please update your profile for more security.</p>
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="personal-info-form big-image">
+        <div class="profile-picture-holder">
+          <span class="profile-image-title">Large Picture</span>
+          <div class="profile-image">
+            <img id="image_upload_preview" src="http://placehold.it/100x100" alt="your image" class="img-responsive" />
+          </div>
+        </div
+        <div class="fileinput-holder">
+          <div class="fileinput fileinput-new" data-provides="fileinput">
+            <span class="btn btn-default btn-file"><span>Upload Image</span>
+              <%= f.file_field :large_photo, id:'inputFile' %>
+            </span>
+            <span class="fileinput-filename"></span>
+          </div>
+          <a href="#" class="btn-remove-image">Remove Image</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="personal-info-form">
+          <div class="profile-picture-holder">
+            <span class="profile-image-title">Profile Picture</span>
+            <div class="profile-image">
+              <img id="s_image_upload_preview" src="http://placehold.it/100x100" alt="your image" class="img-responsive" />
+            </div>
+          </div>
+          <div class="fileinput-holder">
+            <div class="fileinput fileinput-new" data-provides="fileinput">
+              <span class="btn btn-default btn-file"><span>Upload Image</span>
+                <%= f.file_field :photo, id:'sinputFile' %>
+              </span>
+              <span class="fileinput-filename"></span>
+            </div>
+            <a href="#" class="btn-remove-image">Remove Image</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="form-group">
+            <%= f.text_field :organization_name, id:'organization_name', :class =>"form-control", placeholder:'Organization Name' %>
+            <label for="organization_name">Organization Name</label>
+          </div> 
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="form-group">
+            <%= f.text_field :ownername, id:'ownername', :class =>"form-control", placeholder:'Owner Name' %>
+            <label for="ownername">Owner Name</label>
+          </div> 
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="form-group">
+            <%= f.text_field :phone, id:'organization_phone', :class =>"form-control", placeholder:'Organization  Phone' %>
+            <label for="organization_phone">Organization  Phone</label>
+          </div> 
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="form-group">
+            <%= f.text_field :phone2, id:'organization_phone2', :class =>"form-control", placeholder:'Organization  Secondary Phone' %>
+            <label for="organization_phone2">Organization Secondary Phone</label>
+          </div> 
+        </div>
+      </div>
+    </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :email, id:'organization_email', :class =>"form-control", placeholder:'Organization Email' %>
+          <label for="organization_email">Organization Email</label>
+        </div> 
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :email2, id:'Organization_Alternate_email ', :class =>"form-control", placeholder:'Organization Alternate Email ' %>
+          <label for="Organization_Alternate_email">Organization Alternate email </label>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :email2, id:'organizatioin_establish_date', :class =>"form-control", placeholder:'Establish Organizatioin Date ' %>
+          <label for="Organization_Alternate_email">Establish Organizatioin Date </label>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :webSite, id:'website_link', :class =>"form-control", placeholder:'Website link/ YouTube/channel' %>
+          <label for="website_link">Website link/ YouTube/channel </label>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :address, id:'website_link', :class =>"form-control", placeholder:'Organization  Address' %>
+          <label for="website_link">Organization  Address </label>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :country, id:'country', :class =>"form-control", placeholder:'Country' %>
+          <label for="country">Country</label>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :province, id:'Province', :class =>"form-control", placeholder:'Province' %>
+          <label for="Province">Province</label>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :city, id:'City', :class =>"form-control", placeholder:'City' %>
+          <label for="City">City/Town</label>
+        </div>    
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :area, id:'Area_Name', :class =>"form-control", placeholder:'Area Name' %>  
+          <label for="Area_Name">Area Name <span class="glyphicon glyphicon-user"> </span></label>
+        </div>     
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :facebook_link, id:'Facebook', :class =>"form-control", placeholder:'Facebook Address' %>  
+          <label for="Facebook">Facebook Address<span class="glyphicon glyphicon-align-envelope"></label>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :twitter_link, id:'Twitter_Account', :class =>"form-control", placeholder:'Twitter Account' %>
+          <label for="Twitter_Account">Twitter Account <span class="glyphicon glyphicon-align-envelope"></label>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :whatsapp, id:'WhatsApp_no', :class =>"form-control", placeholder:'WhatsApp No' %>
+          <label for="WhatsApp_no">WhatsApp No <span class="glyphicon glyphicon-align-envelope"></label>
+        </div>
+      </div>
+  </div>
+  <a href="#" class="btn-save btn-add-client">
+   + Add New Client
+  </a> 
+  <button class="btn-save">
+    Save
+  </button>
+<% end %> -->

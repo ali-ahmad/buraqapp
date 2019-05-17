@@ -1,0 +1,389 @@
+
+  <div class="panel-area">
+    <h1>All Organizar</h1>
+    <a class="invite-applicant" href="#">+ Add a property</a>
+    <button class="invite-applicant-btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i> </button>
+  </div>
+  <div class="applicant-control-area breadcome-heading ">
+    <div class="col-md-12 col-sm-12 col-xs-12 buttonlist-padding">
+      <ul class="button-list">
+        <li class="edit-btn"><a  href="#">Edit</a></li>
+        <li class="btn-sort-holder">
+          <div class="dropdown">
+            <button class="dropdown-toggle btn-sort" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Sort
+            <span class="caret"></span>
+            </button>
+          </div>
+        </li>
+        <li class="filter-area">
+          <%=form_tag('/organizations', method: :get) do |f| %>
+            <div id="label2"><label for="search-terms" id="search-label">Filter</label></div>
+            <div id="input2">
+              <%=text_field_tag'query', params[:query], id:'search-terms' %>
+            </div>
+          <%end%>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <% @organizations.each do |organizar| %> 
+    <div class="columns-applicant">
+      <div class="checkbox">
+        <div class="i-checks pull-left">
+          <label>
+            <%= check_box_tag "" %>
+          </label>
+        </div>
+      </div>
+      <div class="row-wrap">
+        <div class="row row-eq-height">
+         <div class="col-table-box-1">
+          <p>1</p>
+         </div>
+          <div class="col-table-box-2 address-col">
+            <div class="applicant-mobile-date">
+              <div class="applicant-holder">
+                <%#= image_tag organizar.photo, :class =>"applicant-image" %>
+              </div>
+              <div class="applicant-info">
+                <%= link_to organizar.organization_name, organization_path(organizar), :class =>'applicant-name' %>
+                <address class="applicant-address">
+                  <i class="fa fa-map-marker"></i> 
+                  <%= organizar.address %>
+                </address>
+              </div>
+            </div>
+          </div>
+          <div class="col-table-box-3 mob-display-none">
+            <a href="#"><%= organizar.email %></a>  
+                              
+          </div>
+          <div class="col-table-box-5">
+            <div class="phone-wrap">
+              <p><%= organizar.phone %> </p>
+              <p><%= organizar.phone2 %> </p>
+            </div>
+          </div>
+          <div class="col-table-box-6">
+            <div class="score">
+              <p><%= organizar.id %></p>
+            </div>
+          </div>
+          <div class="col-table-box-7">
+            <div class="score">
+              <p><%= organizar.country %></p>
+              <p><%= organizar.province %></p>
+            </div>
+          </div>
+          <div class="col-table-box-8">
+            <div class="score">
+              <p><%= organizar.city %></p>
+              <p><%= organizar.area %></p>
+            </div>
+          </div>
+          <div class="col-table-box-9">
+            <div class="score">
+            </div>
+          </div>
+          <div class="col-table-box-10">
+            <div class="score">
+              <%= link_to "", organization_path(organizar), :data=> {:confirm=> "Are you sure? "}, :class=> 'fa fa-trash', :method => :delete %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="columns-applicant">
+   <div class="checkbox">
+      <div class="i-checks pull-left">
+        <label>
+          <%= check_box_tag "" %>
+        </label>
+      </div>
+    </div>
+    <div class="row-wrap">
+      <div class="row row-eq-height">
+        <div class="col-table-box-2 address-col">
+          <div class="applicant-mobile-date">
+            <div class="applicant-holder">
+              <%= image_tag ("IMG_2745.JPG"), :class =>"applicant-image" %>
+            </div>
+            <div class="applicant-info">
+              <%= link_to "Ali Ahmad", :class =>'applicant-name' %>
+              <address class="applicant-address">
+                <i class="fa fa-map-marker"></i> 
+
+                Ploat No 16 Larawx Colony Madani CHowk Data nagar
+              </address>
+            </div>
+          </div>
+        </div>
+        <div class="col-table-box-3 mob-display-none">
+          <a href="#">ali.jutt486@gmail.com</a>  
+                            
+        </div>
+        <div class="col-table-box-5">
+          <div class="phone-wrap">
+            <p>0347-8146082 </p>
+            <p>0312-4083276 </p>
+          </div>
+        </div>
+        <div class="col-table-box-6">
+          <div class="score">
+            <p>12</p>
+            <p>352026600814</p>
+          </div>
+        </div>
+        <div class="col-table-box-7">
+          <div class="score">
+            <p>Pakistan</p>
+            <p>Punjabi</p>
+          </div>
+        </div>
+        <div class="col-table-box-8">
+          <div class="score">
+            <p>Lahore</p>
+            <p>Badami Bhag</p>
+          </div>
+        </div>
+        <div class="col-table-box-9">
+          <div class="score">
+            <p>pass</p>
+          </div>
+        </div>
+        <div class="col-table-box-10">
+          <div class="score">
+            <%= link_to "3", :data=> {:confirm=> "Are you sure? "}, :class=> 'fa fa-trash', :method => :delete %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="columns-applicant">
+   <div class="checkbox">
+      <div class="i-checks pull-left">
+        <label>
+          <%= check_box_tag "" %>
+        </label>
+      </div>
+    </div>
+    <div class="row-wrap">
+      <div class="row row-eq-height">
+        <div class="col-table-box-2 address-col">
+          <div class="applicant-mobile-date">
+            <div class="applicant-holder">
+              <%= image_tag ("IMG_2745.JPG"), :class =>"applicant-image" %>
+            </div>
+            <div class="applicant-info">
+              <%= link_to "Ali Ahmad", :class =>'applicant-name' %>
+              <address class="applicant-address">
+                <i class="fa fa-map-marker"></i> 
+
+                Ploat No 16 Larawx Colony Madani CHowk Data nagar
+              </address>
+            </div>
+          </div>
+        </div>
+        <div class="col-table-box-3 mob-display-none">
+          <a href="#">ali.jutt486@gmail.com</a>  
+                            
+        </div>
+        <div class="col-table-box-5">
+          <div class="phone-wrap">
+            <p>0347-8146082 </p>
+            <p>0312-4083276 </p>
+          </div>
+        </div>
+        <div class="col-table-box-6">
+          <div class="score">
+            <p>12</p>
+            <p>352026600814</p>
+          </div>
+        </div>
+        <div class="col-table-box-7">
+          <div class="score">
+            <p>Pakistan</p>
+            <p>Punjabi</p>
+          </div>
+        </div>
+        <div class="col-table-box-8">
+          <div class="score">
+            <p>Lahore</p>
+            <p>Badami Bhag</p>
+          </div>
+        </div>
+        <div class="col-table-box-9">
+          <div class="score">
+            <p>pass</p>
+          </div>
+        </div>
+        <div class="col-table-box-10">
+          <div class="score">
+            <%= link_to "3", :data=> {:confirm=> "Are you sure? "}, :class=> 'fa fa-trash', :method => :delete %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="group-columns">
+    <div class="columns-applicant">
+      <div class="checkbox">
+        <div class="i-checks pull-left">
+          <label>
+            <%= check_box_tag "" %>
+          </label>
+        </div>
+      </div>
+      <div class="row-wrap">
+        <div class="row row-eq-height">
+          <div class="col-table-box-2 address-col">
+            <div class="applicant-mobile-date">
+              <div class="applicant-holder">
+                <%= image_tag ("IMG_2745.JPG"), :class =>"applicant-image" %>
+              </div>
+              <div class="applicant-info">
+                <%= link_to "Ali Ahmad", :class =>'applicant-name' %>
+                <address class="applicant-address">
+                  <i class="fa fa-map-marker"></i> 
+
+                  Ploat No 16 Larawx Colony Madani CHowk Data nagar
+                </address>
+              </div>
+            </div>
+          </div>
+          <div class="col-table-box-3 mob-display-none">
+            <a href="#">ali.jutt486@gmail.com</a>  
+                              
+          </div>
+          <div class="col-table-box-5">
+            <div class="phone-wrap">
+              <p>0347-8146082 </p>
+              <p>0312-4083276 </p>
+            </div>
+          </div>
+          <div class="col-table-box-6">
+            <div class="score">
+              <p>12</p>
+              <p>352026600814</p>
+            </div>
+          </div>
+          <div class="col-table-box-7">
+            <div class="score">
+              <p>Pakistan</p>
+              <p>Punjabi</p>
+            </div>
+          </div>
+          <div class="col-table-box-8">
+            <div class="score">
+              <p>Lahore</p>
+              <p>Badami Bhag</p>
+            </div>
+          </div>
+          <div class="col-table-box-9">
+            <div class="score">
+              <p>pass</p>
+            </div>
+          </div>
+          <div class="col-table-box-10">
+            <div class="score">
+              <%= link_to "3", :data=> {:confirm=> "Are you sure? "}, :class=>'fa fa-trash', :method => :delete %>
+            </div>
+          </div>
+        </div>
+        <div class="row row-eq-height group-applicant-row">
+          <div class="col-table-box-2 address-col">
+            <div class="applicant-mobile-date">
+              <div class="applicant-holder">
+                <%= image_tag ("IMG_2745.JPG"), :class =>"applicant-image" %>
+              </div>
+              <div class="applicant-info">
+                <%= link_to "Ali Ahmad", :class =>'applicant-name' %>
+              </div>
+            </div>
+          </div>
+          <div class="col-table-box-3 mob-display-none">
+            <a href="#">ali.jutt486@gmail.com</a>  
+                              
+          </div>
+          <div class="col-table-box-5">
+            <div class="phone-wrap">
+              <p>0347-8146082 </p>
+            </div>
+          </div>
+          <div class="col-table-box-6">
+            <div class="score">
+              <p>352026600814</p>
+            </div>
+          </div>
+          <div class="col-table-box-7">
+            <div class="score">
+            </div>
+          </div>
+          <div class="col-table-box-8">
+            <div class="score">
+            </div>
+          </div>
+          <div class="col-table-box-9">
+            <div class="score">
+            </div>
+          </div>
+          <div class="col-table-box-10">
+            <div class="score">
+              <%= link_to "3", :data=> {:confirm=> "Are you sure? "}, :class=> 'fa fa-trash', :method => :delete %>
+            </div>
+          </div>
+        </div>
+        <div class="row row-eq-height group-applicant-row">
+          <div class="col-table-box-2 address-col">
+            <div class="applicant-mobile-date">
+              <div class="applicant-holder">
+                <%= image_tag ("IMG_2745.JPG"), :class =>"applicant-image" %>
+              </div>
+              <div class="applicant-info">
+                <%= link_to "Ali Ahmad", :class =>'applicant-name' %>
+              </div>
+            </div>
+          </div>
+          <div class="col-table-box-3 mob-display-none">
+            <a href="#">ali.jutt486@gmail.com</a>  
+                              
+          </div>
+          <div class="col-table-box-5">
+            <div class="phone-wrap">
+              <p>0347-8146082 </p>
+            </div>
+          </div>
+          <div class="col-table-box-6">
+            <div class="score">
+              <p>352026600814</p>
+            </div>
+          </div>
+          <div class="col-table-box-7">
+            <div class="score">
+            </div>
+          </div>
+          <div class="col-table-box-8">
+            <div class="score">
+            </div>
+          </div>
+          <div class="col-table-box-9">
+            <div class="score">
+            </div>
+          </div>
+          <div class="col-table-box-10">
+            <div class="score">
+              <%= link_to "3", :data=> {:confirm=> "Are you sure? "}, :class=> 'fa fa-trash', :method => :delete %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

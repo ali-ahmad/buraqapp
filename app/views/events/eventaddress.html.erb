@@ -1,0 +1,66 @@
+    <%= form_for(@event, url: events_path, method: 'POST', :html => {:class => ' add-professors', id:'demo1-upload' }) do |f| %>
+            <div id="myTabContent" class="tab-content custom-product-edit">
+        
+              <div class="product-tab-list tab-pane fade" id="adderss">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="review-content-section">
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="form-group">
+                                <div class="chosen-select-single mg-b-20">
+                                  <%= f.select(:client_name, [ 'Client Name Select', 'Ali Ahmad', 'Ahmad', 'Rashid Ahamad', 'Thusday', 'Friday', '', 'Sunday' ], {tabindex:"-1"}, { :class => 'chosen-select' }) %>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :address, id:'Address', :class =>"form-control", placeholder:'Address' %>
+                              </div>     
+                            </div>
+                            <div class="col-md-6 col-xs-12 margin-bottom-none">
+                              <div class="form-group">
+                                <%= f.text_field :location_picker, id:'LandMark', :class =>"form-control", placeholder:'Location Map' %>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :country, id:'country', :class =>"form-control", placeholder:'Country' %>
+                              </div>   
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :province, id:'Province', :class =>"form-control", placeholder:'Province' %>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :city, id:'City', :class =>"form-control", placeholder:'City/Town Name' %>
+                              </div>    
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :area_name, id:'Area_Name', :class =>"form-control", placeholder:'Area Name (UC)' %>  
+                              </div>     
+                            </div> 
+                          </div>
+                          <div class="payment-adress">
+                            <a class="btn btn-primary waves-effect waves-light btnNext" >Next</a>
+                            <a class="btn btn-primary waves-effect waves-light btnPrevious" >Previous</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+            </div>
+          </div>
+        <% end %>

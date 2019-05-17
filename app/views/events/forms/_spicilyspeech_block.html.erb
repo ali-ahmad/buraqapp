@@ -1,0 +1,97 @@
+<%= form_for(@event, url: submit_path(@event), method: 'POST', :html => {:class => ' add-professors', id:'demo1-upload' }) do |f| %>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  
+        <div class="review-content-section">
+
+
+          <div class="row" id="dynamic_form">
+            <div class="col-lg-12">
+              <div class="devit-card-custom">
+                <div class="row">
+                  <div class="col-md-6 col-xs-12">
+                    <div class="form-group">
+                      <%= f.text_field :country, id:'remarks', :class =>"form-control", placeholder:'Skill Name' %>
+                    </div>   
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <div class="form-group">
+                      <%= f.text_field :country, name:'p_name', id:'p_name', :class =>"form-control", placeholder:'Special Designation' %>
+                    </div>   
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <div class="form-group">
+                      <%= f.text_field :country, name:'quantity', id:'quantity', :class =>"form-control", placeholder:'Full Name' %>
+                    </div>   
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <div class="form-group">
+                      <%= f.text_field :country, id:'country', :class =>"form-control", placeholder:'Photo' %>
+                    </div>   
+                  </div>
+                </div>
+                <div class="button-group col-md-12 row">
+                  <a href="javascript:void(0)" class="btn btn-danger " id="minus5">Remove</a>
+                    <hr>
+                  <a href="javascript:void(0)" class="btn btn-primary" id="plus5">Add More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="payment-adress">
+             <a class="btn btn-primary waves-effect waves-light btnPrevious" >Previous</a>
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+          </div>
+
+
+
+        </div>
+    </div>
+  </div>
+<% end %>
+
+
+
+<script>
+    var $imageupload = $('.imageupload');
+    $imageupload.imageupload();
+
+    $('#imageupload-reset').on('click', function() {
+        $imageupload.imageupload('reset');
+        $(this).blur();
+    });
+
+
+
+    $(document).ready(function() {
+      var dynamic_form =  $("#dynamic_form").dynamicForm("#dynamic_form","#plus5", "#minus5", {
+        limit:10,
+        formPrefix : "dynamic_form",
+        normalizeFullForm : false
+    });
+
+      dynamic_form.inject([{quantity: '123',remarks: 'testing remark'},{quantity: '123',remarks: 'testing remark'}]);
+
+    $("#dynamic_form #minus5").on('click', function(){
+      var initDynamicId = $(this).closest('#dynamic_form').parent().find("[id^='dynamic_form']").length;
+      if (initDynamicId === 2) {
+        $(this).closest('#dynamic_form').next().find('#minus5').hide();
+      }
+      $(this).closest('#dynamic_form').remove();
+    });
+
+    $('form').on('submit', function(event){
+        var values = {};
+    $.each($('form').serializeArray(), function(i, field) {
+        values[field.name] = field.value;
+    });
+    console.log(values)
+        event.preventDefault();
+      })
+    });
+
+
+</script>

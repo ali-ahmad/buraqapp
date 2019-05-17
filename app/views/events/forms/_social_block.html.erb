@@ -1,0 +1,61 @@
+<%= form_for(@event, url: submit_path(@event), method: 'POST', :html => {:class => ' add-professors', id:'demo1-upload' }) do |f| %>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="review-content-section">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="devit-card-custom">
+              <div class="row">  
+              
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group">
+                    <%= f.text_field :facebookbook_link, id:'Facebook Address', :class =>"form-control", placeholder:'Facebook URL' %>  
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group">
+                    <%= f.text_field :twitter_link, id:'Twitter_Account', :class =>"form-control", placeholder:'Twitter URL' %>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group">
+                    <%= f.text_field :twitter_link, id:'WhatsApp_no', :class =>"form-control", placeholder:'WhatsApp No' %>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group">
+                    <input type="url" class="form-control" placeholder="Google Plus">
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group">
+                    <input type="url" class="form-control" placeholder="Instagram URL">
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group">
+                    <input type="url" class="form-control" placeholder="Youtube URL">
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password">
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Confirm Password">
+                  </div>
+                </div>
+              </div>
+              <div class="payment-adress">
+                 <a class="btn btn-primary waves-effect waves-light btnPrevious" >Previous</a>
+                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

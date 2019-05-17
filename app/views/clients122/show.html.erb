@@ -1,0 +1,534 @@
+<div class="applicantdetails">
+  <div class="panel-area client-details">
+    <div class="container">
+      <div class="row row-margin-0">
+        <div class="col-sm-6 col-xs-12">
+          <h1>Client Details</h1>
+          <a href="">Go to Back</a>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <ul class="progress-status">
+            <li><i class="fa fa-circle circle-gray"> </i>Incomplete</li>
+            <li><i class="fa fa-circle circle-yellow"></i> Pending</li>
+            <li><i class="fa fa-circle circle-green"></i> Accepted</li>
+            <li><i class="fa fa-circle circle-magenta"></i> Denied</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container container-padding-0">
+    <div class="details-content">
+      <div class="preferred-options">
+        <h4>Preferred Options</h4>
+        <ul class="preferred-list">
+          <li>
+            <strong>Basic</strong>
+            <p>Plain Type</p>
+          </li>
+          <li>
+            <strong>$4,500 - $6,100</strong>
+            <p>Event Budget</p>
+          </li>
+          <li>
+            <strong>10 Oct - 20 Nov</strong>
+            <p>Order Date</p>
+          </li>
+        </ul>
+      </div>
+      <div class="apply-details">
+        <div class="image-holder">
+          <img src="images/retina-check.JPG" class="img-responsive">
+        </div>
+        <div class="apply-status">
+          <div class="apply-box">
+            Currently Event For
+          </div>
+          <div class="apply-box-details">
+            <ul class="apply-infor-list">
+              <li>
+                <div class="info-box-left">
+                  <address class="apply-address">
+                    <strong>678 Pacific Avenue #110</strong>
+                    <i class="fa fa-map-marker"></i> 
+                    San Francisco, CA 94108
+                  </address>
+                </div>
+                <div class="info-box-right">
+                  <div class="bugdet-info">
+                    <p><em class="pluse-price">+240</em> $2,800 </p>
+                    <span>Rent</span>
+                  </div>
+                </div>
+              </li>
+               <li>
+                <div class="info-box-left">
+                 <div class="roms-details">
+                  <div class="room-info">
+                    <span><img src="images/bed.svg"> x2</span>
+                    <p>Bedroom</p>
+                  </div>
+                  <div class="room-info">
+                    <span><img src="images/bath.svg"> x1</span>
+                    <p>Bathroom</p>
+                  </div>
+                </div>
+                </div>
+                <div class="info-box-right">
+                  <div class="applicant-date">
+                    <strong class="date">Oct 1, 2016</strong>
+                    <span>Available</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        <div class="applicant-details-block pet-table vehicles-table">
+          <h2>Event Orgnization  Owner  Detail</h2>
+          <ul class="block-list">
+            <li>
+              <div class="col">
+                <div class="pet-image-holder">
+                </div>
+              </div>
+              <div class="col">
+                <p><%= @client.firstname %></p>
+                <span><i class="fa fa-map-marker"></i><%= @client.address %></span>
+              </div>
+              <div class="col">
+                <p>Phone</p>
+                <span><%= @client.phone %></span>
+              </div>
+              <div class="col">
+                <p>Email Address</p>
+                <span><%= @client.email %></span>
+              </div>
+              <div class="col">
+                <div class="dropdown tasks-dropdown-table">
+                  <button class="tasks-dropdown-table-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#"><img src="images/resend-icon.svg"> Re-send</a></li>
+                    <li><a href="#"><img src="images/forward-icon-drop.svg"> Forward</a></li>
+                    <li><a href="#"><img src="images/complete-icon.svg"> Complete</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      <div class="applicant-details-block pet-table vehicles-table">
+        <h2>Event Orgnization  Members Detail</h2>
+        <ul class="block-list">
+          <li>
+            <div class="col">
+              <div class="pet-image-holder">
+              </div>
+            </div>
+            <div class="col">
+              <p>Ali Ahmad pakistan </p>
+              <span><i class="fa fa-map-marker"></i> H No 1 Street 2 Bhatti Gade lahore</span>
+            </div>
+            <div class="col">
+              <p>Phone</p>
+              <span>(0333) 473 9876</span>
+            </div>
+            <div class="col">
+              <p>Email Address</p>
+              <span>red_roseali@gmail.com</span>
+            </div>
+            <div class="col">
+              <div class="dropdown tasks-dropdown-table">
+                <button class="tasks-dropdown-table-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#"><img src="images/resend-icon.svg"> Re-send</a></li>
+                  <li><a href="#"><img src="images/forward-icon-drop.svg"> Forward</a></li>
+                  <li><a href="#"><img src="images/complete-icon.svg"> Complete</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="block-list">
+          <li>
+            <div class="col">
+              <div class="pet-image-holder">
+              </div>
+            </div>
+            <div class="col">
+              <p>Ali Ahmad pakistan </p>
+              <span><i class="fa fa-map-marker"></i> H No 1 Street 2 Bhatti Gade lahore</span>
+            </div>
+            <div class="col">
+              <p>Phone</p>
+              <span>(0333) 473 9876</span>
+            </div>
+            <div class="col">
+              <p>Email Address</p>
+              <span>red_roseali@gmail.com</span>
+            </div>
+            <div class="col">
+              <div class="dropdown tasks-dropdown-table">
+                <button class="tasks-dropdown-table-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#"><img src="images/resend-icon.svg"> Re-send</a></li>
+                  <li><a href="#"><img src="images/forward-icon-drop.svg"> Forward</a></li>
+                  <li><a href="#"><img src="images/complete-icon.svg"> Complete</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="block-list">
+          <li>
+            <div class="col">
+              <div class="pet-image-holder">
+              </div>
+            </div>
+            <div class="col">
+              <p>Ali Ahmad pakistan </p>
+              <span><i class="fa fa-map-marker"></i> H No 1 Street 2 Bhatti Gade lahore</span>
+            </div>
+            <div class="col">
+              <p>Phone</p>
+              <span>(0333) 473 9876</span>
+            </div>
+            <div class="col">
+              <p>Email Address</p>
+              <span>red_roseali@gmail.com</span>
+            </div>
+            <div class="col">
+              <div class="dropdown tasks-dropdown-table">
+                <button class="tasks-dropdown-table-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#"><img src="images/resend-icon.svg"> Re-send</a></li>
+                  <li><a href="#"><img src="images/forward-icon-drop.svg"> Forward</a></li>
+                  <li><a href="#"><img src="images/complete-icon.svg"> Complete</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="your-tasks-box">
+        <div class="tasks-box-head">
+          <div class="col-md-9 col-sm-8 col-xs-9"">
+            <strong>Will you be using water filled furniture in your residence?</strong>
+          </div>
+           <div class="col-md-3 col-sm-4 col-xs-3">
+             <p>Yes</p>
+          </div>
+        </div>
+        <ul class="tasks-box-status">
+          <li>
+            <div class="col-md-9 col-sm-8 col-xs-9"">
+              <p>Do you have musical instruments?</p> 
+            </div>
+             <div class="col-md-3 col-sm-4 col-xs-3">
+                <p>Yes</p>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-9 col-sm-8 col-xs-9">
+              <p>Do you smoke?</p> 
+            </div>
+             <div class="col-md-3 col-sm-4 col-xs-3">
+                <p>No</p>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-9 col-sm-8 col-xs-9"">
+              <p>Message from Sam Moore</p> 
+            </div>
+             <div class="col-md-3 col-sm-4 col-xs-3">
+               <span>Action: <em>Respond</em></span>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-12 text-center">
+              <p><img src="images/cross.svg"> Application is invalid!</p> 
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="details-sidebar">
+      <div class="applicant-info-box">
+        <div class="head">
+          <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+              <button type="button" class="btn btn-primary button-copy">
+              </button>
+            </div>
+            <div class="col-md-5 col-sm-4 col-xs-6">
+              <a href="#" class="full-profile-modal" data-toggle="modal" data-target="#myModal11">
+               <img src="images/ico-personaldetails.svg"> 
+               Full profile
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-6 text-right">
+              <div class="dropdown applicant-details-dorpdown">
+                <button class="applicant-details-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                 <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#"><img src="images/archived.svg"> Archive</a></li>
+                  <li><a href="#"><img src="images/property_delete.svg"> Delete</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="applicant-info-content">
+          <div class="applicant-border-bottom">
+            <span class="applicant-info-circle">
+              AM
+            </span>
+            <h3>Orgnization Name</h3>
+            <span class="border-bottom"></span>
+          </div>
+          <a class="email" href="#">ammie.mcdowell@cosigner.com</a>
+          <span class="mobile-none">(347) 814-6082</span>
+          <div class="row mob-date-area">
+            <div class="col-md-12 col-sm-6 col-xs-4 date-display-none text-left">
+              <button type="button" class="btn btn-primary button-email">
+                <img src="images/mail-icon.svg">
+              </button>
+              <button type="button" class="btn btn-primary button-email">
+                <img src="images/phone-icon.svg">
+              </button>
+            </div>
+            <div class="col-md-12 col-sm-6 col-xs-8 date-area">
+              <p>1233</p>
+              <p>35202-6600814-3</p>
+              <em class="date">25 Oct 2016</em>
+              <address>House No 3 Street 3 Data Naghar Badami Bagh Lahore </br> Pakistan</address>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="roommates-box">
+        <ul class="roommates-list">
+          <li>
+            <span>CP</span>
+            <span>TB</span>
+            <span>SM</span>
+            <p>Roommates</p>
+          </li>
+          <li>
+           <div class="pets-circle">
+            <p>+2</p>
+            <p>Events </p>
+           </div>
+          </li>
+           <li class="cosigners">
+            <span>suni</span>
+            <span>TB</span>
+            <p>Cetagory</p>
+          </li>
+        </ul>
+      </div>
+      <div class="event-budget-box">
+        <ul class="event-budget-list">
+          <li class="credit-score">
+            <strong>704</strong>
+            <p>Credit Score</p>
+          </li>
+          <li>
+            <strong>$6,128</strong>
+            <p>Event Budget</p>
+          </li>
+        </ul>
+      </div>
+      <div class="activity-feed-block internal-notes">
+        <h3>Internal Notes</h3>
+        <div class="remaining-block-inner">
+          <ul class="activityfeed-list">
+            <li data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal1">
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <img src="images/activity-feed-intellirent.svg">  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                <div class="feed-content">
+                  <strong class="feed-title">Review Notes</strong>
+                </div>
+                  <p>Contents of this internal note will go here, and you can click to view the ent…</p>
+                </div>
+              </div>
+            </li>
+            <li data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal1">
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <span class="feed-circle">AM</span>  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                  <div class="feed-content">
+                    <strong class="feed-title">Additional Details</strong>
+                    <p class="clampMe">Contents of this internal note will go here, and you can click to view the en Contents of this internal note will go here, and you can click to view the ent Contents of this internal note will go here, and you can click to view the en</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal1">
+              <div class="row" >
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <img src="images/activity-feed-intellirent.svg">  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                  <div class="feed-content">
+                    <strong class="feed-title">Contact Details</strong>
+                     <p class="clampMe">Contents of this internal note will go here, and you can click to view the en Contents of this internal note will go here, and you can click to view the en Contents of this internal note will go here, and you can click to view the en</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal1">
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <span class="feed-circle">AM</span>  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                  <div class="feed-content">
+                    <strong class="feed-title">Meeting Info</strong>
+                    <p class="clampMe">Contents of this internal note will go here, and you can click to view the ent Contents of this internal note will go here, and you can click to view the ent…</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal1">
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <span class="feed-circle">AM</span>  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                  <div class="feed-content">
+                    <strong class="feed-title">Personal Details Discrepancy</strong>
+                    <p class="clampMe">Contents of this internal note will go here, and you can click to view the ent Contents of this internal note will go here, and you can click to view the ent…</p>
+                  </div>
+                  
+                </div>
+              </div>
+            </li>
+            <li data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal1">
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <span class="feed-circle">AM</span>  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                <div class="feed-content">
+                  <strong class="feed-title">Review Requirements Info</strong>
+                </div>
+                  <p class="clampMe">Contents of this internal note will go here, and you can click to view the ent…</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn-sidebar" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal2">+ Add New Note</button>
+        </div>
+      </div>
+      <div class="activity-feed-block">
+        <h3>Activity Feed</h3>
+        <div class="remaining-block-inner">
+          <ul class="activityfeed-list">
+            <li>
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <img src="images/activity-feed-intellirent.svg">  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                <div class="feed-content">
+                  <strong class="feed-title">Intellirent</strong>
+                  <em class="feed-date">Oct 4 / 8:38pm</em>
+                </div>
+                  <p>Credit/Background info confirmed</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <span class="feed-circle">AM</span>  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                <div class="feed-content">
+                  <strong class="feed-title">You</strong>
+                  <em class="feed-date">Oct 4 / 8:38pm</em>
+                </div>
+                  <p>Personal Information amendments submitted</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <img src="images/activity-feed-intellirent.svg">  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                <div class="feed-content">
+                  <strong class="feed-title">Intellirent</strong>
+                  <em class="feed-date">Oct 4 / 8:38pm</em>
+                </div>
+                  <p>Application returned for amendments</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <span class="feed-circle">AM</span>  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                <div class="feed-content">
+                  <strong class="feed-title">You</strong>
+                  <em class="feed-date">Oct 4 / 8:38pm</em>
+                </div>
+                  <p>Application submited</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <span class="feed-circle">AM</span>  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                <div class="feed-content">
+                  <strong class="feed-title">You</strong>
+                  <em class="feed-date">Oct 4 / 8:38pm</em>
+                </div>
+                  <p>Created personal information draft</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                  <span class="feed-circle">AM</span>  
+                </div>
+                <div class="col-md-10 col-sm-9 col-xs-10 padding-left-6">
+                <div class="feed-content">
+                  <strong class="feed-title">You</strong>
+                  <em class="feed-date">Oct 4 / 8:38pm</em>
+                </div>
+                  <p>Created account</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn-sidebar">View all activities</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>

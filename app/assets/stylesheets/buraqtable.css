@@ -1,0 +1,207 @@
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+ .columns-applicant {
+  margin: 0 0 12px;
+  float: left;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+ }
+
+
+ .row-wrap {
+  width: 100%;
+ }
+.row-eq-height {
+  display: -webkit-box;     
+  display: -moz-box;        
+  display: -ms-flexbox;      
+  display: -webkit-flex;   
+  display: flex;   
+  border: none; 
+  margin: 0 0 12px;
+  padding: 0;
+  background: #fff;
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+.columns-applicant [class*="col"] {
+	padding: 10px 5px 15px;
+	border: solid 1px #e1e8eb;
+  display: -webkit-box;     
+  display: -moz-box;        
+  display: -ms-flexbox;      
+  display: -webkit-flex;   
+  display: flex; 
+  align-items: center;
+  -webkit-align-items: center; /* Safari 7.0+ */
+  -webkit-justify-content: space-around; /* Safari 6.1+ */
+  border: solid  #e1e8eb;
+  font-size: 12px !important;
+  border-width: 1px 1px 1px 0;
+/*	justify-content: center;*/
+}
+.columns-applicant .col-table-box-1 {
+  width: 3%;
+  border-width: 1px 1px 1px 1px;
+}
+.columns-applicant .col-table-box-2 {
+  width: 25.1%;
+  padding: 10px 5px 15px !important;
+}
+.columns-applicant .col-table-box-3 {
+  width: 18.8%;
+}
+.columns-applicant .col-table-box-4 {
+  width: 11%;
+}
+.columns-applicant .col-table-box-5 {
+  width: 12%;
+}
+.columns-applicant .col-table-box-6 {
+  width: 12%;
+}
+.columns-applicant .col-table-box-7 {
+  width: 10%;
+}
+.columns-applicant .col-table-box-8 {
+  width: 12%;
+}
+.columns-applicant .col-table-box-9 {
+  width: 10%;
+}
+.group-applicant-row .col-table-box-2 {
+  width: 27.9%;
+  padding: 0 6px 0 15px !important;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.group-applicant-row .applicant-image {
+  width: 50px;
+  height: 50px;
+}
+.group-columns .row-eq-height{
+  margin: 0;
+}
+.group-columns .columns-applicant [class*="col"] {
+  border-width: 1px 1px 0 0;
+}
+.group-columns .group-applicant-row .applicant-holder {
+  width: 25%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.group-columns .group-applicant-row .applicant-info {
+  display: table-cell;
+  vertical-align: middle;
+  width:75%;
+}
+
+.applicant-mobile-date {
+  width: 100%;
+}
+.group-columns  .columns-applicant {
+  align-items: inherit;
+  justify-content: inherit;
+}
+.group-columns .checkbox {
+  margin-top: 52px;
+}
+.columns-applicant .checkbox label{
+  padding-left: 0;
+  margin-right: 12px;
+}
+.columns-applicant p {
+  margin:  0 0 2px !important;
+}
+.group-applicant-row .col-table-box-8,
+.group-applicant-row .col-table-box-7,
+.group-applicant-row .col-table-box-6,
+.group-applicant-row .col-table-box-5,
+.group-applicant-row .col-table-box-3,
+.group-applicant-row .col-table-box-2 {
+  border-width: 1px 0 0 0 !important;
+}
+
+@media screen and (max-width: 992px) {
+  .columns-applicant .col-table-box-4 {
+    width: 14.4%;
+    padding: 0 1% 0 0.9%;
+  }
+  .address-col {
+    line-height: 22px;
+    padding: 0 3% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  /* Applicant Columns Start */
+  .columns-applicant [class*="col"] {
+    padding: 4%;
+  }
+  .row-eq-height {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .columns-applicant {
+    margin: 0 auto 12px;
+    float: none;
+    width: 100%;
+    padding: 0 15px;
+  }
+  .columns-applicant .col-table-box-5{
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 3px 3px;
+    width: 100%;
+    padding-top: 0;
+  }
+  .columns-applicant .col-table-box-2 {
+    border-width: 1px 1px 0 1px;
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  .address-col {
+    line-height: 22px;
+    padding: 4% 4% 4%!important;
+  }
+  .applicant-mobile-date .applicant-info {
+    display: table-cell;
+    vertical-align: top;
+    width: 45%;
+  }
+  .credit-score .credit-ammount{
+    font-size: 28px;
+  }
+  .applicant-mobile-date{
+    display: table;
+    width: 100%;
+    padding: 0 0 4%;
+  }
+  .applicant-mobile-date:last-child {
+    padding: 0;
+  }
+  .applicant-date {
+    display: table-cell;
+    vertical-align: top;
+    width: 45%;
+  }
+  .credit-score {
+    min-height: auto; 
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+  }
+
+
+  /* Applicant Columns Start End */
+}

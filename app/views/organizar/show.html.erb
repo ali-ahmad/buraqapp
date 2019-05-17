@@ -1,0 +1,699 @@
+
+<div class="content-page profile-page">
+ <!-- Silder -->
+<div class="slider">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/retina-check.JPG" class="img-responsive" alt="...">
+      </div>
+      <div class="item">
+        <img src="images/retina-check.JPG" class="img-responsive" alt="...">
+      </div>
+    </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    </a>
+  </div>
+  <ul data-toggle="modal" data-backdrop="modal-backdrop" data-target=".bs-example-modal-lg" class="names-latter">
+    <li class="bg-none">
+      <span>14</span>
+    </li>
+    <li class="bg-none">
+      <span><i class="fa fa-user"></i></span>
+    </li>
+  </ul>
+</div>
+<!-- Content -->
+<div class="eventdetails-holder">
+  <div class="property-details">
+    <div class="container container-padding-0">
+      <div class="details-content">
+        <div class="user-details">
+          <div class="applicant-info">
+
+            <a class="applicant-name" href="#">Program Type</a>
+            <address class="applicant-address">
+             <i class="fa fa-map-marker"></i> 
+
+             <%= @organizar.address %>
+             <%= @organizar.province %>
+             <%= @organizar.city %>
+             <%= @organizar.area_name %>
+             <%= @organizar.country %>
+            </address>
+          </div>
+          <div class="dropdown applicant-details-dorpdown">
+            <button class="applicant-details-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+             <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#"><img src="images/property_archive.svg"> Archive</a></li>
+              <li><a href="#"><img src="images/property_delete.svg"> Delete</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="event-details row">
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <p>Email Address</p>
+            <span>ali.jutf212@gmiil.com</span>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <p>Date</p>
+            <span>Aug 31, 2016 <%= @organizar.datetime %> </span>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <p>Day</p>
+            <span>Monday <%= @organizar.day %> </span>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <p>TIme</p>
+            <span><%= @organizar.time %> </span>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <p>City</p>
+            <span>Lahore <%= @organizar.city %> </span>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <p>Aarea</p>
+            <span>Badmi Bagh <%= @organizar.area_name %> </span>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <p>Phone No</p>
+            <span><%= @organizar.whatsappno %> </span>
+          </div>
+        
+        </div>
+    
+        <div class="description">
+          <div class="head">
+            <strong class="title">Client Details</strong>
+            <button class="btn-edit" type="button" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal1">
+             <i class="fa fa-pencil" ></i> Edit Section
+            </button>
+          </div>
+            
+          <div class="event-details row">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <p>Email Address</p>
+              <span>ali.jutf212@gmiil.com</span>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <p>Date</p>
+              <span>Aug 31, 2016</span>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <p>Day</p>
+              <span>Monday</span>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <p>City</p>
+              <span>Lahore</span>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <p>Aarea</p>
+              <span>Badmi Bagh</span>
+            </div>
+             <div class="col-md-3 col-sm-3 col-xs-3">
+              <p>Phone No</p>
+              <span>03478146082</span>
+            </div>
+             <div class="col-md-3 col-sm-3 col-xs-3">
+              <p>City</p>
+              <span>Lahore</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="description">
+          <div class="head">
+            <strong class="title">Description</strong>
+            <button class="btn-edit" type="button" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal1">
+             <i class="fa fa-pencil" ></i> Edit Section
+            </button>
+          </div>
+          <div class="details-section">
+            <p>Park 20 Apartments raises the bar and offers a new standard for apartment living. Here residents occupy spacious and modern studio, one- and two-bedroom apartments featuring custom interiors and designer finishes. Cook in a gourmet kitchen featuring Caesar Stone countertops and sleek stainless steel appliances. The subway tile backsplash and custom cabinetry create a clean and sophisticated appearance. This space also features a designer lighting package and beautiful hardwood style flooring, the perfect complement to a room that's been done to perfection.<p>
+          </div>
+        </div>
+        <div class="description">
+          <div class="head">
+            <strong class="title">Location</strong>
+            <button class="btn-edit" type="button" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal1">
+             <i class="fa fa-pencil" ></i> Edit Section
+            </button>
+          </div>
+          <div class="details-section">
+            <div id="map" style="margin-bottom:20px; width: 100%; height: 262px; background:#ccc">
+          </div>
+        </div>
+        <div class="amenities">
+          <div class="head">
+            <strong class="title">Main Event Member’s Spicily Speech </strong>
+            <button class="btn-edit" type="button" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal2">
+              <i class="fa fa-pencil" ></i> Edit Section
+            </button>
+          </div>
+          <div class="details-section details-amenities">
+            <ul class="amenities-list">
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Air Conditioning</p>
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+            </ul>
+          </div>      
+        </div>
+        <div class="amenities">
+          <div class="head">
+            <strong class="title"> Competitor  Name</strong>
+            <button class="btn-edit" type="button" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal2">
+              <i class="fa fa-pencil" ></i> Edit Section
+            </button>
+          </div>
+          <div class="details-section details-amenities">
+            <ul class="amenities-list">
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Air Conditioning</p>
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="amenities">
+          <div class="head">
+            <strong class="title"> Talawat Guest</strong>
+            <button class="btn-edit" type="button" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal2">
+              <i class="fa fa-pencil" ></i> Edit Section
+            </button>
+          </div>
+          <div class="details-section details-amenities">
+            <ul class="amenities-list">
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Air Conditioning</p>
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="amenities">
+          <div class="head">
+            <strong class="title"> Special Guest</strong>
+            <button class="btn-edit" type="button" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal2">
+              <i class="fa fa-pencil" ></i> Edit Section
+            </button>
+          </div>
+          <div class="details-section details-amenities">
+            <ul class="amenities-list">
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Air Conditioning</p>
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="amenities">
+          <div class="head">
+            <strong class="title"> Vocalist Name</strong>
+            <button class="btn-edit" type="button" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal2">
+              <i class="fa fa-pencil" ></i> Edit Section
+            </button>
+          </div>
+          <div class="details-section details-amenities">
+            <ul class="amenities-list">
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Air Conditioning</p>
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="amenities">
+          <div class="head">
+            <strong class="title">Responsers Name</strong>
+            <button class="btn-edit" type="button" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal2">
+              <i class="fa fa-pencil" ></i> Edit Section
+            </button>
+          </div>
+          <div class="details-section details-amenities">
+            <ul class="amenities-list">
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Air Conditioning</p>
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+              <li>
+                <div class="member-image-holder">
+                  <img src="images/retina-check.jpg">
+                </div>
+                <p>Dishwasher</p> 
+              </li>
+            </ul>
+          </div>
+        </div>
+       
+        <div class="gallery-block">
+          <div class="head">
+            <strong class="title">Responsers Name</strong>
+            <button class="btn-edit" type="button" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal3">
+              <i class="fa fa-pencil" ></i> Edit Section
+            </button>
+          </div>
+          <div class="accordion" id="accordion1">
+            <div class="accordion-group">
+              <div class="details-section">
+                <div class="gallery-top-block">
+                  <div class="galleryc-tow-col">
+                    <div class="galleryc-col-12 toprow-bottom-mg">
+                      <div class="galleryc-col-6">
+                        <img src="images/retina-check.jpg" alt="gallery images">
+                      </div>
+                      <div class="galleryc-col-6">
+                        <img src="images/retina-check.jpg" alt="gallery images">
+                      </div>
+                    </div>
+                    <div class="galleryc-col-12">
+                      <img src="images/retina-check.jpg" class="full-widtt-toprow">
+                    </div>
+                  </div>
+                  <div class="galleryc-tow-col">
+                    <img src="images/retina-check.jpg" alt="gallery images" class="image-right-col">
+                  </div>
+                </div>
+                <div class="gallery-bottom-block">
+                  <div class="galleryc-col-4">
+                    <img src="images/retina-check.jpg" alt="gallery images">
+                  </div>
+                   <div class="galleryc-col-4">
+                    <img src="images/retina-check.jpg" alt="gallery images">
+                  </div>
+                   <div class="galleryc-col-4">
+                    <img src="images/retina-check.jpg" alt="gallery images">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="collapseOne" class="accordion-body collapse">
+              <div class="details-section">
+                <div class="gallery-top-block">
+                  <div class="galleryc-tow-col">
+                    <div class="galleryc-col-12 toprow-bottom-mg">
+                      <div class="galleryc-col-6">
+                        <img src="images/retina-check.jpg" alt="gallery images">
+                      </div>
+                      <div class="galleryc-col-6">
+                        <img src="images/retina-check.jpg" alt="gallery images">
+                      </div>
+                    </div>
+                    <div class="galleryc-col-12">
+                      <img src="images/retina-check.jpg" class="full-widtt-toprow">
+                    </div>
+                  </div>
+                  <div class="galleryc-tow-col">
+                    <img src="images/retina-check.jpg" alt="gallery images" class="image-right-col">
+                  </div>
+                </div>
+                <div class="gallery-bottom-block">
+                  <div class="galleryc-col-4">
+                    <img src="images/retina-check.jpg" alt="gallery images">
+                  </div>
+                   <div class="galleryc-col-4">
+                    <img src="images/retina-check.jpg" alt="gallery images">
+                  </div>
+                   <div class="galleryc-col-4">
+                    <img src="images/retina-check.jpg" alt="gallery images">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="see-more-holder">
+              <button class=" btn-show-more SeeMore1" data-toggle="collapse" href="#collapseOne"> See all images (16 available)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Start on Mobile -->
+    </div>
+
+      <div class="details-sidebar">
+        <div class="top-applicant-block">
+          <div class="col-md-12 col-sm-12 col-xs-12 logo-area">
+            <a  class="logo " href="#">
+              LOGO IMAGE
+            </a>
+          </div>
+          <ul class="top-applicant-head">
+            <li>
+              <h1>Top Applicants</h1>
+              <button type="button" class="btn-addnew btn btn-primary"  data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal5">+ Add New</button>
+               <button class="invite-applicant-btn" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#myModal5" type="submit"><i class="fa fa-plus" aria-hidden="true"></i> </button>
+            </li>
+            <li>
+              <h2>Sort by:</h2>
+              <div class="dropdown relevance-dropdown">
+                <button class="btn-relevance dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Relevance
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu menu-relevance" aria-labelledby="dropdownMenu1">
+                  <li><a href="#">Relevance</a></li>
+                  <li><a href="#">Credit Score</a></li>
+                  <li><a href="#">Rent</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="top-applicant-table top-applicant-table2">
+                <div class="row-eq-height">
+                  <div class="col-md-3 col-sm-3 col-xs-3 table-name">
+                    <strong>Plain</strong>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                   <p class="point-green">Started</p>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 border-none">
+                    <span>Rs 2500</span> 
+                  </div>
+                </div>
+                <div class="row-eq-height">
+                  <div class="col-md-3 col-sm-3 col-xs-3 table-name">
+                    <strong>Flex</strong>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                   <p class="point-green">703</p>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 border-none">
+                    <span>Badhami Bagh</span> 
+                  </div>
+                </div>
+                <div class="row-eq-height">
+                  <div class="col-md-3 col-sm-3 col-xs-3 table-name">
+                    <strong>SMS</strong>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                   <p>698</p>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 border-none">
+                    <span>500 Man</span> 
+                  </div>
+                </div>
+                <div class="row-eq-height">
+                  <div class="col-md-3 col-sm-3 col-xs-3 table-name">
+                    <strong>Emails</strong>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                   <p>Weakly</p>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 border-none">
+                    <span>Area 3</span> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="collapseTwo" class="top-applicant-table accordion-body collapse">
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Cable Add</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>2 Cable Network</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>Rs 600</span> 
+                </div>
+              </div>
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Cable Live</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>Time</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>Rs 2,040</span> 
+                </div>
+              </div>
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Net Live</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>Fcebook / Youtube</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>Rs 3,155</span> 
+                </div>
+              </div>
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Raksh Flex Add</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>6</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>Rs. 600</span> 
+                </div>
+              </div>
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Recoding</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>618</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>8 HOUR</span> 
+                </div>
+              </div>
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Betty Davis</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>603</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>$2,330</span> 
+                </div>
+              </div>
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Caroline Moore</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>641</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>$2,280</span> 
+                </div>
+              </div>
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Caroline Moore</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>641</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>$2,280</span> 
+                </div>
+              </div>
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Caroline Moore</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>641</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>$2,280</span> 
+                </div>
+              </div>
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Caroline Moore</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>641</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>$2,280</span> 
+                </div>
+              </div>
+              <div class="row-eq-height">
+                <div class="col-md-4 col-sm-4 col-xs-4 table-name">
+                  <strong>Caroline Moore</strong>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                 <p>641</p>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 border-none">
+                  <span>$2,280</span> 
+                </div>
+              </div>
+            </div>
+            <div class="see-more-holder">
+              <button class=" btn-show-more SeeMore2" data-toggle="collapse" href="#collapseTwo">See more applicants (10 more available)</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </div>
+</div>
+</div>

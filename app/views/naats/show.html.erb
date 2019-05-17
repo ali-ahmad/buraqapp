@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div class="row">
+  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="tabbable tabs-left">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="tab-content">
+              <% @naat.naatlyrics.each do |naatlyrics| %>
+                  <div class="tab-pane fade <%= 'in active' if @naat.naatlyrics.first == naatlyrics %>" id="<%=(naatlyrics.title.gsub(/[0-9]+/, "")+naatlyrics.id.to_s).parameterize%>">
+                      <div class="naat-frame">
+                        <%= image_tag naatlyrics.photo&.url,  :class =>"img-responsive" %>
+                      </div>
+                     <div class="heding">
+                        <h1><%= naatlyrics.try(:title) %> </h1>
+                      </div> 
+                  </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <ul class="nav nav-pills nav-stacked">
+              <% @naat.naatlyrics.each do |naatlyrics| %>
+                  <li><a href="#<%=(naatlyrics.title.gsub(/[0-9]+/, "")+naatlyrics.id.to_s).parameterize%>" data-toggle="tab">
+                   <%= naatlyrics.language.try(:name) %></a>
+                 </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+	  	<div class="discription-block">
+        <section id="demo">
+          <article>
+           <%= @naat.description %>
+          </article>
+        </section>
+        <script>
+          $('#info').readmore({
+            moreLink: '<a href="#">Usage, examples, and options</a>',
+            collapsedHeight: 14,
+            afterToggle: function(trigger, element, expanded) {
+              if(! expanded) { // The "Close" link was clicked
+                $('html, body').animate({scrollTop: element.offset().top}, {duration: 100});
+              }
+            }
+          });
+
+          $('article').readmore({speed: 500});
+        </script>
+	  	</div>
+    </div>
+
+	</div>
+</div>
