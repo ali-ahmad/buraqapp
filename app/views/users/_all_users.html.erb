@@ -1,0 +1,100 @@
+<!-- Mobile Menu end -->
+<div class="breadcome-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcome-list">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-3 col-sm-2 col-xs-12">
+                         <h1>User</h1>
+                      </div>
+                      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                        <div class="breadcome-heading">
+                          <%=form_tag('/users', method: :get) do |f| %>
+                            <div id="label2"><label for="search-terms" id="search-label">Filter</label></div>
+                            <div id="input2">
+                              <%=text_field_tag'query', params[:query], id:'search-terms' %>
+                            </div>
+                          <%end%>
+
+                        </div>
+                      </div>
+                      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                        <a class="invite-applicant" href="http://localhost:3000/newclient/index" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#inviteModal11">+ New User</a>
+                        <button class="invite-applicant-btn" data-toggle="modal" data-backdrop="modal-backdrop" data-target="#inviteModal11" type="submit"><i class="fa fa-plus" aria-hidden="true"></i> </button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <% @users.each do |user| %> 
+    <div class="columns-applicant">
+      <div class="checkbox">
+        <div class="i-checks pull-left">
+          <label>
+            <%= check_box_tag "user_ids[]", user.id %>
+          </label>
+        </div>
+      </div>
+      <div class="row-wrap">
+        <div class="row row-eq-height">
+         <div class="col-table-box-1">
+          <p>1</p>
+         </div>
+          <div class="col-table-box-2 address-col">
+            <div class="applicant-mobile-date">
+              <div class="applicant-holder">
+                <%#= image_tag user.photo_url(user),  :class =>"img-responsive" %>
+              </div>
+              <div class="applicant-info">
+                <%= user.firstname %>
+                <address class="applicant-address">
+                  <i class="fa fa-map-marker"></i> 
+                  <%= user.address %>
+                </address>
+              </div>
+            </div>
+          </div>
+          <div class="col-table-box-3 mob-display-none">
+            <a href="#"><%#= user.email %></a>  
+                              
+          </div>
+          <div class="col-table-box-5">
+            <div class="phone-wrap">
+              <p><%= user.phone %> </p>
+            </div>
+          </div>
+          <div class="col-table-box-6">
+            <div class="score">
+              <p><%= user.id %></p>
+              <p><%= user.nicn %></p>
+            </div>
+          </div>
+          <div class="col-table-box-7">
+            <div class="score">
+              <p><%= user.country %></p>
+              <p><%= user.province %></p>
+            </div>
+          </div>
+          <div class="col-table-box-8">
+            <div class="score">
+              <p><%= user.city %></p>
+              <p><%= user.area %></p>
+            </div>
+          </div>
+          <div class="col-table-box-9">
+            <div class="score">
+            </div>
+          </div>
+          <div class="col-table-box-10">
+            <div class="score">
+              <%= link_to "", user_path(user), :data=> {:confirm=> "Are you sure? "}, :class=> 'fa fa-trash', :method => :delete %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+

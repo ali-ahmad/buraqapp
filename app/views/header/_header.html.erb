@@ -32,14 +32,14 @@
                                                 </div>
                                                 <ul class="message-menu">
                                                 
-
-                                                    <% if current_profile %>
-                                                        <li><%= current_profile.email %></li>
-                                                        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-                                                    <% else %>
-                                                      <li><%= link_to 'Log In', new_profile_session_path %></li>
-                                                      <li><%= link_to 'Sign Up', new_profile_registration_path %></li>
-                                                    <% end %>
+                                                <% if user_signed_in? %>
+                                                  Logged in as <strong><%= current_user.email %></strong>.
+                                                  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+                                                  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                                                <% else %>
+                                                  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+                                                  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+                                                <% end %>
 
 
 
@@ -146,7 +146,7 @@
                                                             </div>
                                                             <div class="notification-content">
                                                                 <span class="notification-date">16 Sept</span>
-                                                                <h2>Victor Jara</h2>
+                                                                    <h2>Victor Jara</h2>
                                                                 <p>Please done this project as soon possible.</p>
                                                             </div>
                                                         </a>
@@ -157,24 +157,36 @@
                                                 </div>
                                             </div>
                                         </li>
+
                                         <li class="nav-item">
-                                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                  <% if user_signed_in? %>
+                                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                     <%= image_tag 'product/pro4.jpg' %>
-                                                    <span class="admin-name">Prof.Anderson</span>
+                                                    <span class="admin-name">Prof.Anderson <%= current_user.email %></span>
                                                     <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                                 </a>
-                                            <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
-                                                </li>
-                                                <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
-                                                </li>
-                                                <li><a href="#"><span class="edu-icon edu-money author-log-ic"></span>User Billing</a>
-                                                </li>
-                                                <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
-                                                </li>
-                                                <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
-                                                </li>
-                                            </ul>
+                                                <<% end -%>
+                                                <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                    <% if user_signed_in? %>
+                                                        <li>
+                                                
+                                                          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+                                                        </li>
+                                                        <li>
+                                                            <%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => 'navbar-link edu-icon edu-locked author-log-ic'  %>
+                                                        </li>
+                                                    <% else %>
+                                                        <li>
+                                                            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+                                                        </li>
+                                                        <li>
+                                                             <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+                                                        </li>
+                                                          
+                                                     <% end %>          
+                                                </ul>
+
+
                                         </li>
                                         <li class="nav-item nav-setting-open"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-menu"></i></a>
 

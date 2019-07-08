@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.4'
+ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
@@ -39,6 +39,9 @@ gem "cocoon"
 
 # pundit
 gem "pundit"
+
+gem "simple_form"
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

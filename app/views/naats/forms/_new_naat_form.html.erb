@@ -83,7 +83,7 @@
                 <%= @naat.persisted? %>
                 <%= form_for(@naat, url: submit_naat_path(@naat), method: method_type(@naat), :html=> {:class => 'add-professors', id:"demo1-upload" }) do |f| %>
                   <div id='tasks'>
-                     <%= f.fields_for :naatlyrics do |naatlyric| %>
+                    <%= f.fields_for :naatlyrics do |naatlyric| %>
                       <%= render 'naats/forms/naatlyrics_fields', :f => naatlyric %>
                     <% end %>
                     <div class='links'>
