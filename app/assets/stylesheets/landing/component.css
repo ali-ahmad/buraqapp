@@ -1,0 +1,317 @@
+/* General styles for all menus */
+
+.navarea {
+  font: 14px/21px 'robotoregular';
+  padding: 10px 0 0;
+}
+.navarea .navbar-nav {
+  margin: 2px 0 0;
+}
+.navarea .navbar-default {
+  background: none;
+  border: none;
+}
+.navarea .navbar-default .navbar-nav > .active > a,
+.navarea .navbar-default .navbar-nav > .active > a:hover,
+.navarea .navbar-default .navbar-nav > .active > a:focus {
+    background: none;
+}
+.navarea ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navarea .nav > li {
+  padding-left: 15px;
+  padding-bottom: 12px;
+}
+.navarea .nav > li:first-child {
+  padding-left: 0;
+}
+.navarea .navbar-default .navbar-nav > li > a {
+  color: #1ebac1;
+}
+.navarea .navbar {
+  min-height: 0;
+  margin-bottom: 0;
+}
+#sidebar {
+ 
+}
+.cbp-spmenu {
+  background: #fff;
+  height: 100%;
+  position: fixed;
+  top: 0 !important;
+  padding: 81px 0 0;
+  height: 100%;
+  width: 66px !important;
+  list-style: none;
+  font-size: 16px !important;
+  line-height: 43px;
+  text-transform: uppercase;
+}
+.cbp-spmenu-push-toright .cbp-spmenu {
+  width: 240px !important;
+}
+.cbp-spmenu-push-toright .cbp-spmenu a span {
+  display: inline-block;
+}
+.cbp-spmenu a span {
+  display: none;
+}
+.cbp-spmenu li {
+  display: flex;
+  padding: 0;
+}
+.cbp-spmenu li .fa-home:before {
+  padding-right: 12px;
+}
+.cbp-spmenu li a.active,
+.cbp-spmenu li a:hover {
+  color: #fff;
+}
+.cbp-spmenu-push-toright .cbp-spmenu a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  text-align: left;
+}
+.navarea li a {
+  text-align: center;
+  padding: 15px 15px 15px;
+  width: 100%;
+ }
+.cbp-spmenu a span {
+  font-family: 'robotoregular' !important;
+}
+.cbp-spmenu li a:active {
+  /*background: #afdefa;*/
+  /*color: #47a3da;*/
+}
+.open-close {
+  width: 200px;
+  text-align: center;
+  margin-left: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+.header-right {
+  margin-left: 208px !important;
+}
+#showLeftPush {
+  position: fixed;
+  left: 20px;
+  top: 25px;
+  height: 20px;
+  width: 20px;
+  z-index: 10000 !important;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+#showLeftPush span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #b9b5b8;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+/* Icon 3 */
+
+#showLeftPush span:nth-child(1) {
+  top: 0px;
+}
+#showLeftPush span:nth-child(2),
+#showLeftPush span:nth-child(3) {
+  top: 5px;
+}
+#showLeftPush span:nth-child(4) {
+  top: 10px;
+}
+#showLeftPush.open span:nth-child(1) {
+  top: 9px;
+  width: 0%;
+  left: 50%;
+}
+#showLeftPush.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#showLeftPush.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#showLeftPush.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+  left: -240px;
+}
+.cbp-spmenu-right {
+  right: -240px;
+}
+.cbp-spmenu-left.cbp-spmenu-open {
+  left: 0px!important;
+}
+.cbp-spmenu-right.cbp-spmenu-open {
+  right: 0px;
+}
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 62px;
+}
+.cbp-spmenu-push-toright {
+  left: 185px;
+}
+.cbp-spmenu-push-toleft {
+  left: -240px;
+}
+.cbp-spmenu,
+.cbp-spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cbp-spmenu-push .cbp-spmenu-left,
+.cbp-spmenu-push-toleft {
+  left: -3px;
+  z-index: 1;
+}
+@media(max-width: 992px) {
+  .navarea .nav > li {
+    padding-left: 12px;
+  }
+  .cbp-spmenu {
+    display: block;
+  }
+  .btn-aera {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #sidebar {
+    display: block !important;
+    position: relative;
+  }
+  #header .logo {
+    width: 100%;
+    margin: 0;
+  }
+  .mobile-p-r-0 {
+    padding-right: 0;
+  }
+  .mobile-p-l-0 {
+      padding-left: 0;
+  }
+  #header .intellirent-btn {
+    padding: 7px 17px;
+    font: 16px/19px 'robotoregular';
+    margin-left: 13px;
+  }
+  #footer {
+    text-align: center;
+  }
+  .footer-logo-holder {
+    text-align: center;
+    float: none;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header2 {
+    margin-left: 215px;
+  }
+  .cbp-spmenu {
+    top: 0 !important;
+  }
+  .towcolumns aside,
+  #showLeftPush {
+    display: none;
+  }
+  .cbp-spmenu-push {
+    left: 0;
+  }
+}
+@media screen and (max-width: 55.1875em) {
+  .cbp-spmenu-horizontal {
+    font-size: 75%;
+    height: 110px;
+  }
+  .cbp-spmenu-top {
+    top: -110px;
+  }
+  .cbp-spmenu-bottom {
+    bottom: -110px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .banner .banner-caption {
+    position: absolute;
+    left: 30px;
+    width: 90%;
+  }
+}
+@media screen and (max-height: 26.375em) {
+  .cbp-spmenu-vertical {
+    font-size: 90%;
+    width: 190px;
+  }
+  .cbp-spmenu-right {
+    right: -190px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #header .intellirent-btn {
+    padding: 6px 8px;
+    font: 13px/17px 'robotoregular';
+    margin-left: 0;
+  }
+  .section-block .section-btn {
+    padding: 8px 8px;
+    margin: 15px 0 0;
+  }
+  .banner .banner-caption {
+    position: absolute;
+    left: 15px;
+    width: 93%;
+  }
+  .section-block .section-btn {
+    font: 13px/17px 'robotoregular'
+  }
+  .banner .signup-box .intellirent-btn {
+    margin: 0 4px 0;
+    padding: 8px 11px;
+    min-width: 38%;
+    font: 13px/17px 'robotoregular';
+  }
+}

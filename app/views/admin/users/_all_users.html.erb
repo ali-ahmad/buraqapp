@@ -1,0 +1,70 @@
+
+  <% @users.each do |user| %> 
+    <div class="columns-applicant">
+      <div class="checkbox">
+        <div class="i-checks pull-left">
+          <label>
+            <%= check_box_tag "user_ids[]", user.id %>
+          </label>
+        </div>
+      </div>
+      <div class="row-wrap">
+        <div class="row row-eq-height">
+         <div class="col-table-box-1">
+          <p>1</p>
+         </div>
+          <div class="col-table-box-2 address-col">
+            <div class="applicant-mobile-date">
+              <div class="applicant-holder">
+                <%#= image_tag user.photo_url(user),  :class =>"img-responsive" %>
+              </div>
+              <div class="applicant-info">
+                <%= user.firstname %>
+                <address class="applicant-address">
+                  <i class="fa fa-map-marker"></i> 
+                  <%= user.address %>
+                </address>
+              </div>
+            </div>
+          </div>
+          <div class="col-table-box-3 mob-display-none">
+            <a href="#"><%#= user.email %></a>  
+                              
+          </div>
+          <div class="col-table-box-5">
+            <div class="phone-wrap">
+              <p><%= user.phone %> </p>
+            </div>
+          </div>
+          <div class="col-table-box-6">
+            <div class="score">
+              <p><%= user.id %></p>
+              <p><%= user.nicn %></p>
+            </div>
+          </div>
+          <div class="col-table-box-7">
+            <div class="score">
+              <p><%= user.country %></p>
+              <p><%= user.province %></p>
+            </div>
+          </div>
+          <div class="col-table-box-8">
+            <div class="score">
+              <p><%= user.city %></p>
+              <p><%= user.area %></p>
+            </div>
+          </div>
+          <div class="col-table-box-9">
+            <div class="score">
+            </div>
+          </div>
+          <div class="col-table-box-10">
+            <div class="score">
+              <%= link_to "", user_path(user), :data=> {:confirm=> "Are you sure? "}, :class=> 'fa fa-trash', :method => :delete %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+

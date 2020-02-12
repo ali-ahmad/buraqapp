@@ -1,0 +1,1077 @@
+
+.penal-list {
+  margin: 0;
+  padding: 0 0 0 0;
+  list-style: none;
+  float: left;
+  width: 100%;
+  font-size: 14px;
+}
+.penal-list li:first-child {
+  width: 6.2%;
+  margin: 10px 10px 0 0;
+  text-align: left;
+}
+.penal-list li:first-child .form-control{
+  padding: 6px 8px;
+}
+.penal-list li {
+  margin: 0 10px 0 0;
+  width: 20.2%;
+  float: left;
+}
+.penal-list li:last-child {
+  text-align: left;
+  margin: 0 0 0 0;
+}
+.btn-filter-mob {
+  display: none;
+}
+/* Base for label styling */
+.penal-list [type="checkbox"]:not(:checked),
+.penal-list [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.penal-list [type="checkbox"]:not(:checked) + label,
+.penal-list [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 2.95em;
+  background: url('../images/car-icon.svg') no-repeat 18px 2px; 
+  cursor: pointer;
+  line-height: 12px;
+  font-size: 14px;
+  text-align: left;
+  color: #2d3030;
+}
+
+/* checkbox aspect */
+.penal-list [type="checkbox"]:not(:checked) + label:before,
+.penal-list [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  border-radius: 3px;
+    width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: #edeff0;
+  border: solid 1px #a3b0b2
+}
+/* checked mark aspect */
+.penal-list [type="checkbox"]:not(:checked) + label:after,
+.penal-list [type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  font-size: 9px;
+  line-height: 0.8;
+  color: #000;
+  transition: all .2s;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* checked mark aspect changes */
+.penal-list [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.penal-list [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+.penal-list [type="checkbox"]:disabled:not(:checked) + label:before,
+.penal-list [type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+.penal-list [type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+.penal-list .form-control{
+  color: #000;
+  height: 35px;
+  background: none;
+  font-size: 14px;
+  color: #2d3030;
+}
+.form-control.select-bathrooms {
+  background: url("../images/shawar-icon.svg") no-repeat 15px 54%;
+   padding: 6px 12px 6px 10px;
+}
+.form-control.select-bedromes {
+  background: url(../images/bed-icon.svg) no-repeat 18px 54%;
+  padding: 6px 12px 6px 34px;
+}
+.select-area-holder {
+  min-height: 100px;
+  background: #f7f9fa;
+  border-top: 1px solid #dce2e6;
+  border-bottom: 1px solid #dce2e6;
+  float: left;
+  width: 100%;
+  margin: 0 0 33px;
+}
+.select-area-holder .select-area {
+  margin-top: 27px;
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+}
+.select-area {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  float: left;
+  width: 100%;
+}
+.fillter-area  {
+  float: left;
+  width: 86%;
+}
+.view-block {
+  float: right;
+  width: 14%;
+  padding-right: 15px;
+}
+.view-penal {
+  float: right;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.view-penal li {
+  float: left;
+  margin: 0 15px 0 0;
+} 
+.view-penal li:last-child {
+  margin: 0 0 0 0;
+}
+.view-penal li a {
+  background: url("../images/grid-icon.svg") no-repeat;
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+.view-penal li.active a {
+  background: url("../images/grid-view-active.svg") no-repeat;
+}
+.view-penal li.list-view-icon a {
+  background: url("../images/icon-listview.svg") no-repeat;
+}
+.view-penal li.active.list-view-icon a {
+  background: url("../images/listing-icon-active.svg") no-repeat;
+}
+.view-penal li.map-view-icon a {
+  background: url("../images/map-view.svg") no-repeat;
+}
+.view-penal li.active.map-view-icon a {
+  background: url("../images/map-view.active.svg") no-repeat;
+}
+.styled-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: #f35429;
+  }
+  
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #f35429;
+  }
+  
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+.btn-pluse {
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(39, 48, 48, 0.08);
+  border: solid 1px #a3b0b2;
+  display: block;
+  border-radius: 100%;
+  line-height: 30px;
+  text-align: center;
+  color: #2d3030;
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.counting {
+  line-height: 30px;
+  color: #2d3030;
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.btn-pluse:hover,
+.btn-minus:hover,
+.counting:hover {
+  text-decoration: none;
+}
+.btn-minus {
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(39, 48, 48, 0.08);
+  border: solid 1px #a3b0b2;
+  display: block;
+  border-radius: 100%;
+  line-height: 30px;
+  text-align: center;
+  color: #2d3030;
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.penal-list  .dropdown-select .dropdown-menu{
+  width: 213px;
+  min-height: 147.4px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(39, 48, 48, 0.08);
+  border: solid 1px #dde2e6;
+  padding: 41px 0 0;
+  text-align: center;
+}
+.penal-list  .dropdown-select.dropdown-average .dropdown-menu{
+  width: 364px;
+  height: 231.4px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(39, 48, 48, 0.08);
+  border: solid 1px #dde2e6;
+  padding: 35px 35px 0;
+}
+.average-textarea {
+  line-height: 24px;
+  font-size: 18px;
+  text-align: center;
+  color: #2d3030;
+  margin:0 0 35px;
+  float: left;
+  width: 100%;
+}
+.average-textarea span {
+  line-height: 19px;
+  font-size: 14px;
+  text-align: center;
+  color: #636a6b;
+  display: block;
+}
+
+.penal-list  .dropdown-select  .btn-clear {
+  line-height: 37px;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  color: #17adbc;
+  width: 100%;
+  height: 40px;
+  background-color: #f7f9fa;
+  display: block;
+  border: solid #dde2e6;
+  border-width: 1px 0 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0
+}
+.count-area {
+  display: table;
+  width: 100%;
+  padding: 0 30px 0;
+  margin-bottom: 15px;
+}
+.stort-by-list {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #e1e8eb;
+  border-top: 1px solid #e1e8eb;
+  padding: 14px 0;
+}
+.stort-by-list ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 19px;
+  font-size: 14px;
+  color: #636a6b;
+  display: table;
+  width: 100%;
+}
+.stort-by-list li {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 11px;
+  width: 10%;
+}
+.stort-by-list li a {
+  color: #636a6b;
+  text-decoration:none;
+}
+.stort-by-list li.active a,
+.stort-by-list li a:active,
+.stort-by-list li a:hover {
+  color: #17adbc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.     */
+
+.p-0-r {
+  padding-right: 0;
+}
+.mapView .property-box:nth-child(2n+2) { margin-right: 0; } 
+.mapView .property-box {
+  width: 48.9%;
+  margin-right: 2.1%;
+  margin-bottom: 24px;
+  position: relative;
+}
+.mapView .fillter-area {
+  float: left;
+  width: 100%;
+}
+.mapView .grid-view-penal {
+  margin: 0 0 16px;
+}
+.mapView .penal-list {
+  padding: 0;
+}
+.mapView .select-area-holder {
+  padding: 0 27px 23px 15px;
+  margin: 0 0 24px;
+}
+.mapView .grid-view-block {
+  padding: 0 27px 0 15px;
+}
+.listing-map-block {
+  border-top: solid 1px #e1e8eb;
+  padding: 0 0 0 12px;
+  margin: 0 0 0;
+}
+.listing-map-block .listing-block {
+  width: 43.22%;
+  float: left;
+  padding: 22px 0 0 0;
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 0 #e1e8eb;
+}
+.listing-map-block .listing-block h2{
+  text-align: center;
+  margin: 0 0 26px;
+}
+.listing-map-block .map-block {
+  width: 56%;
+  height: 860px;
+  float: right;
+  background-color: #eee;
+}
+.apply-details {
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px #e1e8eb;
+  overflow: hidden;
+  margin: 0 0 12px;
+  display: table;
+  width: 100%;
+}
+.listing-post-scroll {
+  height: 750px;
+  padding: 0 6px;
+  border-radius: 4px; 
+  overflow-x: auto;  
+}
+.listing-post-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.listing-post-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.listing-post-scroll::-webkit-scrollbar-thumb {
+  background-color: #e1e8eb;
+  outline: 1px solid #e1e8eb;
+}
+.image-holder {
+  position: relative;
+  width: 100%;
+  display: table-cell;
+  height: 158px;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: #d8d8d8;
+  float: left;
+  background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.5))
+}
+.apply-status {
+  width: 221px;
+  display: table-cell;
+}
+.rental-date-utilities {
+  display: none;
+}
+.apply-status .apply-box {
+  min-height: 120px;
+  border-radius: 3px;
+  border-bottom: solid 1px #e1e8eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 22px;
+  font-size: 16px;
+  text-align: center;
+  color: #2d3030;
+  letter-spacing: -0.2px;
+  font-family: 'open_sansbold';
+   font-weight: 600;
+}
+.apply-infor-list {
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+}
+.apply-infor-list li {
+  width: 100%;
+  float: left;
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+}
+.apply-infor-list li:last-child {
+  border-bottom: none;
+}
+.listing-map-block .listing-block h2 {
+  text-align: center;
+  margin: 0 0 24px;
+  font-family: 'open_sanssemibold';
+  font-size: 18px;
+}
+.info-box-left {
+  float: left;
+  width: 49%;
+}
+.info-box-right {
+  width: 51%;
+  text-align: left;
+}
+.apply-address {
+  line-height: 17px;
+  font-size: 12px;
+  color: #fff;
+}
+.apply-address strong {
+  display: block;
+  line-height: 21px;
+  font-size: 16px;
+  font-family: 'open_sansbold';
+  color: #2d3030;
+  margin: 0 0 5px;
+  font-weight: 600;
+}
+.bugdet-info {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+  font-size: 16px;
+  color: #2d3030;
+}
+.bugdet-info span {
+  line-height: 17px;
+  font-size: 12px;
+  text-align: right;
+  color: #636a6b;
+}
+.pluse-price,
+.minus-price {
+  line-height: 14px;
+  font-size: 10px;
+  text-align: right;
+  color: #ef476f;
+}
+.pluse-price {
+  color: #60e69a;
+}
+.roms-details {
+  color: #636a6b;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: left;
+}
+.roms-details .room-info  {
+  display: inline-block;
+  margin: 0 0 0 0;
+  vertical-align: bottom;
+}
+.rental-date {
+  line-height: 15px;
+  font-size: 12px;
+  color: #636a6b;
+  text-align: left;
+}
+.rental-date .date {
+  color: #2d3030;
+  margin: 0 0 8px;
+  font-size: 16px;
+  display: block;
+}
+.info-box-right span {
+  line-height: 17px;
+  font-size: 12px;
+  color: #636a6b;
+}
+.info-box-left span {
+  line-height: 17px;
+  font-size: 12px;
+  color: #636a6b;
+}
+.promo-text {
+  float: right;
+  line-height: 17px;
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+  color: #acb9ba;
+}
+
+.messenger-holder {
+  display: none !important;
+}
+.dropdown-list li.userdropdown-holder {
+  border-left: none;
+}
+.btn-cancel {
+  height: 48px;
+  border-radius: 3px;
+  border: solid 1px #dde4e8;
+  float: left;
+  width: 21%;
+  text-align: center;
+  color: #abb9ba;
+  text-decoration: none;
+  font: 14px/36px 'open_sanssemibold';
+}
+.button-area {
+  margin: 36px 114px 60px;
+  overflow: hidden;
+}
+.btn-pay {
+  width: 77%;
+  height: 48px;
+  border-radius: 3px;
+  border: solid 1px #dde4e8;
+  float: right;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  font: 14px/45px 'open_sanssemibold';
+  outline: none;
+  outline-offset: 0;
+  box-shadow: none;
+  background-color: #17adbc;
+  border: 1px solid #17adbc;
+}
+.btn-cancel:focus,
+.btn-cancel:active,
+.btn-cancel:hover,
+.btn-cancel.active,
+.btn-pay.active, 
+.btn-pay:focus,
+.btn-pay:active,
+.btn-pay:hover {
+  background-color: #17adbc;
+  border: 1px solid #17adbc;
+  color: #ffffff;
+  outline: none;
+  outline-offset: 0;
+  text-decoration: none;
+  box-shadow: none;
+}
+.info-box-left.info-box-mob,
+.payment-heading-mob {
+  display: none;
+}
+.image-holder {
+  position: relative;
+}
+.property-info-mob {
+  width: 100%;
+  height: 102px;
+  display: block;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff !important;
+  padding: 37px 24px 0;
+}
+.property-info-mob.apply-address {
+  display: block;
+  color: #fff;
+}
+.property-info-mob .apply-address strong {
+  color: #fff;
+}
+.pagination-area {
+  display: block;
+  line-height: 17px;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  display: none;    
+  padding: 24px 0;
+  float: left;
+}
+.pagination-area .pagination {
+  width: 100%;
+  display: table;
+  text-align: center;
+  margin: 0 auto;
+}
+.pagination-area li  {
+  display: table-cell;
+}
+.pagination-area li a {
+   color: #2d3030;   
+}
+.pagination-area .pagination > li > a{
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  border: solid 1px #e1e8eb;
+  border-radius: 100%;
+  line-height: 21px;
+  display: block;
+  margin: 0 auto;
+  float: none;
+}
+.pagination-area .pagination > li.active > a {
+    width: 36px;
+    height: 36px;
+    background-color: #17adbc;
+    border: solid 1px #17adbc;
+    border-radius: 100%;
+    line-height: 21px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    color: #fffl
+}
+.map-property-info {
+  width: 240px;
+  position: fixed;
+  right: 22px;
+  bottom: 6px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(39, 48, 48, 0.08);
+  border: solid 1px #dde2e6;
+}
+.map-property-info strong {
+  font-family: 'open_sanssemibold';
+  line-height: 19px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin: 0 0 5px
+}
+.map-property-info .map-info-img {
+  width: 100%;
+  height: 154px;
+  display: block;
+  margin: 0 auto 0;
+  position: relative;
+  background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.5));
+}
+.map-property-info .map-address {
+  width: 100%;
+  height: 102px;
+  display: block;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+  position: absolute;
+  left: 0;
+  bottom: -35px;
+  width: 100%;
+  color: #fff !important;
+  padding: 10px 24px 0;
+  z-index: 1000;
+}
+.map-property-info .map-info {
+  line-height: 17px;
+  font-size: 12px;
+  color: #636a6b;
+  padding: 0 0 0;
+  float: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 118px;
+}
+.map-property-info-holder {
+  padding: 0 24px;
+}
+.map-info-list {
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+  line-height: 17px;
+  font-size: 12px;
+  float: left;
+  width: 100%;
+  color: #636a6b;
+}
+.map-info-list li {
+  display: block;
+  padding: 4px 0 0;
+  float: left;
+  width: 100%;
+}
+.map-info-list li [class*=col] {
+  padding: 0;
+}
+.map-info-list li strong {
+  text-align: right;
+  color: #2d3030;
+  line-height: 22px;
+  font-family: 'open_sansregular';
+  font-size: 16px;
+}
+.map-btn {
+  width: 100%;
+  float: left;
+  height: 40px;
+  border-radius: 3px;
+  border: solid 1px #3cadbe;
+  background: #fff;
+  margin: 0 0 15px;
+  font-family: 'open_sanssemibold';
+  line-height: 19px;
+  font-size: 14px;
+  color: #17adbc;
+}
+.map-close-icon {
+  text-align: left;
+  float: right;
+  padding: 12px 12px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+
+@media screen and (max-width: 1145px) {
+  .preferred-list li strong,
+  .tasks-box-status li .col-md-3,
+  .tasks-box-status,
+  .apply-status .apply-box,
+  .apply-address strong,
+  .block-list li p,
+  .bugdet-info,
+  .rental-date .date {
+    font-size: 14px;
+  }
+  .applicant-date .date,
+  .bugdet-info,
+  .bugdet-info li.rent,
+  .applicant-name {
+    font-size: 14px;
+  }
+  .roms-details,
+  .applicant-address,
+  .list-latter li span {
+    font-size: 11px;
+  }
+  .details-sidebar {
+    width: 33%;
+  }
+  .activityfeed-list li {
+    padding: 15px;
+  }
+  .property-content {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .listing-map-block .listing-block {
+    width: 100%;
+  }
+  .listing-map-block .map-block {
+    width: 51%;
+  }
+}
+@media screen and (max-width: 992px) { 
+  .roms-details .room-info {
+    margin: 0 9px 0 0;
+  }
+  .info-box-right {
+    width: 50%;
+  }
+  .info-box-left {
+    width: 49%;
+    margin-right: 1%;
+  }
+  .apply-infor-list {
+    padding: 0 10px;
+  }
+  .roommates-list {
+    padding: 30px 10px 27px;
+  }
+  .apply-status {
+    width: 187px;
+  }
+  .property-info-mob {
+    width: 100%;
+    padding: 24px 6px;
+  }
+}
+
+@media screen and (max-width: 767px) { 
+  .mapView .grid-view-block {
+    padding: 20px 27px 20px 15px;
+  }
+  .listing-map-block {
+    padding: 15px 15px;
+    border-top: none;
+  }
+  .pagination-area {
+    display: block;
+  }
+
+  .apply-infor-list {
+    padding: 0 0;
+    width: 100%;
+    display: table;
+  }
+  .image-holder {
+    height: auto;
+    position: relative;
+  }
+  .listing-map-block .map-block {
+    float: left;
+    width: 100%;
+    height: 250px;
+  }
+  .rental-date-utilities {
+    display: block;
+  }
+  .apply-infor-list {
+    padding: 0 10px;
+  }
+
+  .apply-infor-list li {
+    display: inherit;
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+  }
+  .retal-date.retal-date-mobile-view {
+    text-align: left;
+    display: block;
+  }
+  .retal-date .date {
+    color: #2d3030;
+    margin: 0 0 8px;
+    font-size: 14px;
+    display: block;
+    text-align: left;
+  }
+  .info-box-left {
+    width: 49%;
+    margin-right: 1%;
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+  }
+  .info-box-right {
+    text-align: left;
+    display: table-cell;
+    width: 49%;
+    vertical-align: top;
+    float: none;
+  }
+  .retal-date {
+    line-height: 15px;
+    font-size: 12px;
+    color: #636a6b;
+  }
+  .apply-address {
+    display: none;
+  }
+  .apply-details .image-holder {
+    float: left;
+    width: 100%;
+  }
+  .apply-status {
+    float: left;
+    width: 100%;
+  }
+  .apply-status .apply-box {
+    display: none;
+  }  
+  .applicant-info-content .email{
+    display: none;
+  }
+  .applicant-info-content .mobile-none {
+    display: none;
+  }
+  .applicant-info-content span {
+    margin-bottom: 0;
+  }
+  .date-display-none{
+    display: block;
+    padding: 0;
+  }
+  .date-area {
+    text-align: right;
+    padding: 0;
+  }
+  .mob-date-area {
+    float: left;
+    width: 100%;
+    padding: 0 0 24px;
+    margin: 0 0 22px;
+    border-bottom: 1px solid #e1e8eb;
+  }
+  .roommates-box {
+    min-height: auto;
+    padding: 0 0 24px;
+    margin: 0 0 22px;
+  }
+  .roommates-list {
+    padding: 0 10px 0;
+  }
+  .rental-budget-list {
+    padding: 0 0 0;
+  }
+  .rental-budget-box {
+    float: left;
+    width: 100%;
+    min-height: auto;
+    padding: 0 0 24px;
+    margin: 0 0 0;
+  }
+  .ammie-box {
+    min-height: auto;
+    margin: 0;
+  }
+  .listing-map-block .listing-block h2 {
+    display: none;
+  }
+  .listing-map-block .listing-block {
+    padding: 0 12px 0 0;
+  }
+  .penal-list li:first-child {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .penal-list li:nth-child(3n) {
+    margin-right: 0;
+  }
+  .penal-list li {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  .view-block {
+    width: 100%;
+    float: left;
+  }
+  
+}
+@media screen and (max-width: 400px) {  
+  .info-box-right {
+    text-align: right;
+    width: 56%;
+  }
+  .info-box-left {
+    width: 44%;
+    margin-right: 0;
+
+  }
+  .room-info, 
+  .referred-list li strong, .tasks-box-status li .col-md-3, .tasks-box-status, .apply-status .apply-box, .apply-address strong, .block-list li p, .bugdet-info, .rental-date .date {
+    font-size: 12px;
+  }
+}
+
+
+

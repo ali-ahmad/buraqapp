@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Buraqrails</title>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+
+      <%= stylesheet_link_tag    'landing', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'landing', 'data-turbolinks-track': 'reload' %>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body class="cbp-spmenu-push cbp-spmenu-push-toright green">
+      <%= render partial: "landing_pages/header" %>
+      <div class="towcolumns main-page">
+        <%= render partial: "landing_pages/sidebar" %>
+        <%= yield %>
+      </div>
+      <%= render partial: "landing_pages/footer" %>
+    
+  </body>
+  <script type="text/javascript">
+    
+    $('#showLeftPush').click(function(){
+          $(this).toggleClass('open');
+      });
+
+      var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+
+         showLeftPush = document.getElementById( 'showLeftPush' ),
+         body = document.body;
+       
+         showLeftPush.onclick = function() {
+            classie.toggle( this, 'active' );
+            classie.toggle( body, 'cbp-spmenu-push-toright' );
+            classie.toggle( menuLeft, 'cbp-spmenu-open' );
+            // classie.toggle( header, 'header2' );
+            disableOther( 'showLeftPush' );
+           
+         };
+        function disableOther( button ) {
+          if( button !== 'showLeft' ) {
+             classie.toggle( showLeft, 'disabled' );
+          }
+       
+          if( button !== 'showLeftPush' ) {
+             classie.toggle( showLeftPush, 'disabled' );
+          }   
+        }
+            
+    $(window).scroll(function(){
+      if ($(window).scrollTop() >= 1) {
+        $('#header').addClass('fixed-header');
+      }
+      else {
+        $('#header').removeClass('fixed-header');
+      }
+    });
+
+  </script>
+</html>

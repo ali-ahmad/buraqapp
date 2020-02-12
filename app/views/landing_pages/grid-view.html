@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Youtube</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/map-view.css" rel="stylesheet">
+    <link href="css/green.css" rel="stylesheet">
+    <link href="css/component.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- HTML5 s9him and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="cbp-spmenu-push cbp-spmenu-push-toright green">
+    <header id="header">
+      <div class="container-fulid">
+        <div class="col-md-2 col-sm-3 col-xs-3">
+          <a href="#" id="showLeftPush" class="open active" >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+          <strong class="logo">
+            <a href="#"><img src="images/logo.png" class="img-responsive"></a>
+          </strong>
+        </div>
+        <div class="col-md-7 col-sm-6 col-xs-6">
+          <form class="form-inline search-form display-none">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="">
+                <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i> </div>
+              </div>
+            </div>
+          </form>
+          <form action="" class="in-mobile">
+            <input type="search">
+            <i class="fa fa-search fa-search-icon-style"></i>
+          </form>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+          <button class="btn btn-default btn btn-upload" type="submit">Upload</button>
+          <a class="btn btn-default btn-signin" href="#" role="button">Sign In</a>
+        </div>
+        <div class="icon-mobile-menu">
+          <nav class="navarea inner-icon-mobile-menu" >
+            <ul>
+              <li><a href="#"><i class="fa fa-home" aria-hidden="true"> </i></a></li>
+              <li><a href="#"><i class="fa fa-users" aria-hidden="true"> </i></a></li>
+              <li><a href="#"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-history" aria-hidden="true"> </i></a></li>
+              <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="towcolumns main-page">
+      <aside class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left cbp-spmenu-open" id="cbp-spmenu-s1" >
+        <nav class="navarea" >
+          <ul>
+            <li>
+              <a href="index.html">
+                <i class="fa fa-home" aria-hidden="true"> </i><span class="side-nave-span">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-users" aria-hidden="true"> </i><span>Liked Events</span>
+              </a>
+            </li>
+            <li>
+              <a href="grid-view.html">
+                <i class="fa fa-caret-square-o-right" aria-hidden="true"></i><span>Khatabs</span>
+              </a>
+            </li>
+            <li>
+              <a href="islamic-books-libaray.html">
+                <i class="fa fa-history" aria-hidden="true"> </i><span>Islamic Books</span>
+              </a>
+            </li>
+            <li>
+              <a href="lyireus-naats.html">
+                <i class="fa fa-history" aria-hidden="true"></i><span>Naats</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>  
+      <div id="content">
+        <div class="colums-holder">
+          <div class="col-md-12 col-sm-12 col-xs-12 trending-wrap">
+            <div class="select-area">
+              <div class="fillter-area text-right">
+                <div class="btn-filter-mob-holder">
+                  <button type="button" class="btn-filter-mob" data-toggle="modal" data-target=".bs-example-modal-lg">  Filters
+                  </button>
+                   <div class="modal fade bs-example-modal-lg  mob-filter-model" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                      <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                          <ul class="penal-list mob-filter">
+                            <li>
+                             <strong>Filters:</strong>
+                            </li>
+                            <li>
+                              <select class="form-control">
+                                <option>Province</option>
+                                <option>Punjab</option>
+                                <option>Sindh</option>
+                                <option>Khyber Pakhtunkhwa</option>
+                                <option>Balochistan </option>
+                                <option>Gilgit-Baltistan</option>
+                              </select>
+                            </li>
+                            <li>
+                              <select class="form-control select-bedromes">
+                                <option>Cities</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </li>
+                            <li>
+                              <select class="form-control select-bathrooms">
+                                <option><img src="images/shawar-icon.svg">Area Names/ Town</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </li>
+                             <li>
+                              <select class="form-control select-bathrooms">
+                                <option><img src="images/shawar-icon.svg">Area Names/ Town</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </li>
+                            <li class="btn-applyfilters-area">
+                              <button type="button" class="btn-applyfilters">
+                                Apply Filters
+                              </button>
+                               <button type="button" class="btn-applyfilters close-btn">
+                                Close
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+      
+                <ul class="penal-list penal-list-mob">
+                  <li>
+                   <strong>Filters:</strong>
+                  </li>
+                  <li>
+                    <select class="form-control">
+                      <option>Province</option>
+                      <option>Punjab</option>
+                      <option>Sindh</option>
+                      <option>Khyber Pakhtunkhwa</option>
+                      <option>Balochistan </option>
+                      <option>Gilgit-Baltistan</option>
+                    </select>
+                  </li>
+                  <li>
+                    <select class="form-control select-bedromes">
+                      <option>Cities</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </li>
+                  <li>
+                    <select class="form-control select-bathrooms">
+                      <option><img src="images/shawar-icon.svg">Area Names/ Town</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </li>
+                  <li>
+                   <input class="form-control select-bathrooms" type="datepicker" name="">
+                  </li>
+                 
+                </ul>
+            </div>
+            <div class="view-block view-mob-block">
+              <ul class="view-penal">
+                <li>
+                  <img src="images/grid-icon.svg">
+                </li>
+                <li>
+                 <img src="images/icon-listview.svg">
+                </li>
+                <li>
+                 <img src="images/icon-map.svg">
+                </li>
+              </ul>
+              </div>
+            </div>
+            <div class="border-bottom">
+              <h2>Recommended</h2>
+              <nav class="all-videos">
+                <ul class="row video-align-center">
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/12.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/13.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Progaram Type (Name) </strong>
+                        <span class="orgnization">Hmadni Milad Kamati</span>
+                        <address></address>
+                        <span class="author"><!-- 12-12-12 <i class="fa fa-check-square" aria-hidden="true"></i> --></span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/14.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/16.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="border-bottom">
+              <h2>Trending</h2>
+              <nav class="all-videos">
+                <ul class="row video-align-center">
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/19.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/21.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/22.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/31.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="border-bottom">
+              <h2>Continue watching</h2>
+              <nav class="all-videos">
+                <ul class="row video-align-center">
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/40.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/47.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/58.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video-all">
+                      <a href="#">
+                        <div class="image-holder">
+                          <img src="images/62.jpg" class="img-responsive height-100-persent" alt>
+                        </div>
+                        <strong class="title">Beetle gets fixed in a garage (EXCLUSIVE VIDEO)</strong>
+                        <span class="author">by Every Interaction <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/classie.js"></script>
+  <script src="js/main-jquery.js"></script>
+  <style type="text/css">
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      float: left;
+      width: 100% !important; 
+      -webkit-box-shadow: 0px 7px 23px -12px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 7px 23px -12px rgba(0,0,0,0.75);
+      box-shadow: 0px 7px 23px -12px rgba(0,0,0,0.75);
+    }
+  </style>
+  <script>
+
+    $(window).scroll(function(){
+      if ($(window).scrollTop() >= 99) {
+        $('#header').addClass('fixed-header');
+      }
+      else {
+        $('#header').removeClass('fixed-header');
+      }
+    });
+
+  </script>
+  </body>
+</html>

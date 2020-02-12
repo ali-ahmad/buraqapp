@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-
 	include Pundit
   protect_from_forgery
 
@@ -14,6 +13,12 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+
+
+ 
+
+
 
   def user_not_authorized
     flash[:error] = 'You are not authorized to view this page!'

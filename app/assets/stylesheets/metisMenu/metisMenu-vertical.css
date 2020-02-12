@@ -24,9 +24,7 @@
   margin-bottom: 5px;
 }
 .sidebar-nav .metismenu > li {
-/*    -webkit-box-flex: 1;
-    -ms-flex: 1 1 0%;
-    flex: 1 1 0%;*/
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -36,6 +34,10 @@
     flex-direction: column;
     position: relative;
 }
+.sidebar-nav .metismenu > li.active {
+    background: red;
+}
+
 .sidebar-nav .metismenu a {
     position: relative;
     display: block;

@@ -1,0 +1,14 @@
+
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="btn-icon" transform="translate(1.000000, 1.000000)">
+            <text id="$" font-family="RobotoSlab-Bold, Roboto Slab" font-size="20" font-weight="bold" line-spacing="19" fill="#17ADBC">
+                <tspan x="13" y="30">$</tspan>
+            </text>
+            <circle id="Oval" stroke="#17ADBC" stroke-width="0.5" cx="18" cy="18" r="18"></circle>
+        </g>
+    </g>
+</svg>

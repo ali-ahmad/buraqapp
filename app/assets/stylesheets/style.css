@@ -2027,6 +2027,7 @@ ul.two-part-sp li{
     z-index: 99;
     left: 200px;
     right: 0;
+    padding: 4px 0;
     top: 0;
     margin: 0 auto;
     transition: all 0.3s;
@@ -4806,4 +4807,8 @@ div#sparklinehome canvas {
 	text-align: center;
 	float: left;
 	width: 100%;
+}
+.sectioin-search-holder {
+	float: right;
+	padding-right: 15px;
 }

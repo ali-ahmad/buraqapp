@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>A Apple Pie | Read.gov | Library of Congress</title>
+    <link rel="stylesheet" type="text/css" href="css/book.css">
+    <script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/book.js"></script>    
+    <script>var __tcjsch = !0;</script>
+  </head>
+  <body>
+    <div id="GnuBook">
+      <div id="GBheader">
+      	<a class="GBicon logo rollover" href="http://www.loc.gov">&nbsp;</a>
+      	<a class="GBicon rollover book_dept" href="/">&nbsp;</a>
+      	<span class="GBtitle">A Apple Pie</span>
+      </div>
+      <div id="GBtoolbar">
+        <div id="GBtoolbarLink">
+        	<a class="GBicon rollover book_link" href="../../apple-pie.html">&nbsp;</a>
+        </div>
+      	<div id="GBtoolbarLink2">
+      		<span class="label" style="margin-left:10px;">ZOOM </span>
+      		<button class="GBicon rollover zoom_out" onclick="gb.zoom(-1); return false;" title="Zoom out"></button>
+      		<button class="GBicon rollover zoom_in" onclick="gb.zoom(1); return false;" title="Zoom in"></button>
+      		<span class="label"> <span id="GBzoom">Auto</span></span>
+      	</div>
+        <div id="GBtoolbarbuttons">
+          <button class="GBicon rollover cover_mode" onclick="gb.switchMode(1); gb.first(); return false;" title="View Cover"></button>
+          <button class="GBicon rollover two_page_mode" onclick="gb.switchMode(2); return false;" title="Two-page view"></button>
+          <button class="GBicon rollover one_page_mode" onclick="gb.switchMode(1); return false;" title="One-page view"></button>
+          <div class="GBtoolbarmode2" style="display: inline">
+          	<button class="GBicon rollover book_leftmost" title="First page"></button>
+          	<button class="GBicon rollover book_left" title="Flip left"></button>
+          	<button class="GBicon rollover book_right" title="Flip right"></button>
+          	<button class="GBicon rollover book_rightmost" title="Last page"></button>
+          </div>
+          <div class="GBtoolbarmode1" style="display: none;">
+          	<button class="GBicon rollover book_top" title="First page"></button>
+          	<button class="GBicon rollover book_up" title="Page up"></button> 
+	        <button class="GBicon rollover book_down" title="Page down"></button>
+	        <button class="GBicon rollover book_bottom" title="Last page"></button>
+          </div>
+          <form class="GBpageform" action="javascript:" onsubmit="gb.jumpToPage(this.elements[0].value)"> <span class="label">PAGE <input id="GBpagenum" type="text" size="2" onfocus="gb.autoStop();"></span></form>
+          of 50
+        </div>
+      </div>
+      <div id="GBcontainer">
+        <div id="GBtwopageview">
+          <div id="GBbookcover"></div>
+          <div class="leafEdgeR"></div>
+          <div class="leafEdgeL"></div>
+          <div id="GBbookspine"></div>
+          <img src="images/050.jpg" class="gb-img">
+        </div>
+       <!--  <div style="border: 1px solid black; padding: 2px 6px; position: absolute; font-family: sans-serif; font-size: 10px; color: rgb(255, 255, 255); z-index: 1000; background-color: rgb(29, 29, 29); opacity: 1; display: none;"></div>
+      </div> -->
+    </div>
+    <script type="text/javascript" src="js/setup.js"></script>
+    <script type="text/javascript" src="js/s_code.js"></script>
+    <div id="window-resizer-tooltip">
+    	<a href="#" title="Edit settings"></a>
+    		<span class="tooltipTitle">Window size: </span>
+    		<span class="tooltipWidth" id="winWidth"></span> x
+    		<span class="tooltipHeight" id="winHeight"></span><br>
+    		<span class="tooltipTitle">Viewport size: </span>
+    		<span class="tooltipWidth" id="vpWidth"></span> x 
+    		<span class="tooltipHeight" id="vpHeight"></span>
+    	</div>
+  </body>
+</html>

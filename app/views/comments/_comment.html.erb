@@ -1,0 +1,146 @@
+
+<li>
+
+
+  <%= form_for [@comment, Comment.new] do |f| %>
+      <%= f.text_area :body, placeholder: "Add a Reply" %><br/>
+      <%= f.submit "Reply"  %>
+      <% end %>
+
+  <ul>
+  </ul>
+
+</li>
+
+
+
+<div class="comment-section">
+  <form action="/html/tags/html_form_tag_action.cfm" method="post">
+    <div class="short-comment-section">
+      <div class="comment-heading">
+        <h2>32 Comments</h2>
+        <div class="dropdown applicant-details-dorpdown">
+          <button class="applicant-details-btn dropdown-toggle short-by" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+           <img src="images/short-comment-icon.png">SHORT BY
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><a href="#"><img src="images/property_archive.svg"> Archive</a></li>
+            <li><a href="#"><img src="images/property_delete.svg"> Delete</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="comment-box">
+        <div class="user-image">
+          <img src="images/">
+        </div>
+        <div class="form-textarea">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:40px"></textarea>
+          <input type="submit" value="COMMENT" class="submit-button">
+          <button class="cancle">CANCLE</button>
+        </div>
+      </div>
+      <div class="older-user-comments">
+        <div class="older-comment">
+          <div class="user-image">
+            <img src="images/">
+          </div>
+          <div class="user-written-comment">
+            <h4><strong>Ali Ahmad</strong></h4>
+            <span>1 year ago</span>
+            <p>I am written a comment please read and reply me.</p>
+            <div class="like-dislike-comment">
+              <div class="like">
+                <a href="#" class="active"><i class="fa fa-thumbs-up" aria-hidden="true"></i>2.5k</a>
+                <span class="i-like-this">
+                  <p>I like this</p>
+                </span>
+              </div>
+              <div class="dislike">
+                <a href="#"><i class="fa fa-thumbs-down" aria-hidden="true"></i>0</a>
+                <span class="i-dislike-this">
+                  <p>I dislike this</p>
+                </span>
+              </div>
+              <button class="reply-btn">reply</button>
+            </div>
+          </div>
+        </div>
+        <div class="older-comment">
+          <div class="user-image">
+            <img src="images/">
+          </div>
+          <div class="user-written-comment">
+            <h4><strong>M Usama</strong></h4>
+            <span>1 year ago</span>
+            <p>I am written a comment please read and reply me.</p>
+            <div class="like-dislike-comment">
+              <div class="like">
+                <a href="#" class="active"><i class="fa fa-thumbs-up" aria-hidden="true"></i>2.5k</a>
+                <span class="i-like-this">
+                  <p>I like this</p>
+                </span>
+              </div>
+              <div class="dislike">
+                <a href="#"><i class="fa fa-thumbs-down" aria-hidden="true"></i>0</a>
+                <span class="i-dislike-this">
+                  <p>I dislike this</p>
+                </span>
+              </div>
+              <button class="reply-btn">reply</button>
+            </div>
+          </div>
+        </div>
+        <div class="older-comment">
+          <div class="user-image">
+            <img src="images/">
+          </div>
+          <div class="user-written-comment">
+            <h4><strong>Ali Ahmad</strong></h4>
+            <span>1 year ago</span>
+            <p>I am written a comment please read and reply me.</p>
+            <div class="like-dislike-comment">
+              <div class="like">
+                <a href="#" class="active"><i class="fa fa-thumbs-up" aria-hidden="true"></i>2.5k</a>
+                <span class="i-like-this">
+                  <p>I like this</p>
+                </span>
+              </div>
+              <div class="dislike">
+                <a href="#"><i class="fa fa-thumbs-down" aria-hidden="true"></i>0</a>
+                <span class="i-dislike-this">
+                  <p>I dislike this</p>
+                </span>
+              </div>
+              <button class="reply-btn">reply</button>
+            </div>
+          </div>
+        </div>
+        <div class="older-comment">
+          <div class="user-image">
+            <img src="images/">
+          </div>
+          <div class="user-written-comment">
+            <h4><strong>M Usama</strong></h4>
+            <span>1 year ago</span>
+            <p>I am written a comment please read and reply me.</p>
+            <div class="like-dislike-comment">
+              <div class="like">
+                <a href="#" class="active"><i class="fa fa-thumbs-up" aria-hidden="true"></i>2.5k</a>
+                <span class="i-like-this">
+                  <p>I like this</p>
+                </span>
+              </div>
+              <div class="dislike">
+                <a href="#"><i class="fa fa-thumbs-down" aria-hidden="true"></i>0</a>
+                <span class="i-dislike-this">
+                  <p>I dislike this</p>
+                </span>
+              </div>
+              <button class="reply-btn">reply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PropertyListing-actionBar" transform="translate(-1103.000000, -18.000000)">
+            <g id="view-switch" transform="translate(1103.000000, 18.000000)">
+                <g id="ico-gridView">
+                    <polygon id="Stroke" stroke="#A3B0B2" stroke-linecap="round" stroke-linejoin="round" points="0.5 6 6 6 6 0.5 0.5 0.5"></polygon>
+                    <polygon id="Stroke" stroke="#A3B0B2" stroke-linecap="round" stroke-linejoin="round" points="8 6 13.5 6 13.5 0.5 8 0.5"></polygon>
+                    <polygon id="Stroke" stroke="#A3B0B2" stroke-linecap="round" stroke-linejoin="round" points="0.5 13.5 6 13.5 6 8 0.5 8"></polygon>
+                    <polygon id="Fill" fill="#EDEFF0" points="8 13.5 13.5 13.5 13.5 8 8 8"></polygon>
+                    <polygon id="Stroke" stroke="#A3B0B2" stroke-linecap="round" stroke-linejoin="round" points="8 13.5 13.5 13.5 13.5 8 8 8"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

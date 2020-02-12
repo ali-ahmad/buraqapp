@@ -1,4 +1,111 @@
-<div class="applicant all-events">
-	<%= render partial: "all_naats_show" %>
-</div>
+ <div  id="content" class="left-close-side-bar">
+  <div class="banner">
+  </div>
+  <div class="colums-holder">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="palyer-container  big-event">
+          <h2>Latest Events</h2>
+          <div class="row">
+            <div class="col-md-7 col-sm-7 col-xs-12 p-right-0">
+              <div class="player-mole">
+                <div class="player-image">
+                  <img src="images/video-list-image.png" class="img-responsive" alt="Video images">
+                </div>
+                <strong class="video-title">House No 16 street no 2 Madni Chowk data Naghar lahore </strong>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-12 text-right">
+              <ul class="video-list">
+                <li>
+                  <a href="#">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-3 p-right-0">
+                        <img src="images/14.jpg" class="img-responsive">
+                      </div>
+                      <div class="col-xs-8 col-md-8  text-left">
+                       <strong class="video-title">House No 16 street no 2 Madni Chowk data Naghar lahore</strong>
+                        <p>by Every Interaction</p>
+                      </div>
+              pr      </div>  
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-3 p-right-0">
+                        <img src="images/12.jpg" class="img-responsive">
+                      </div>
+                      <div class="col-xs-8 col-md-8  text-left">
+                       <strong class="video-title">House No 16 street no 2 Madni Chowk data Naghar lahore</strong>
+                        <p>by Every Interaction</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-3 p-right-0">
+                        <img src="images/31.jpg" class="img-responsive">
 
+                      </div>
+                      <div class="col-xs-8 col-md-8  text-left">
+                       <strong class="video-title">Heart shaped leaf floating</strong>
+                        <p>by Every Interaction</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+         <div class="colums-holder">
+        <div class="col-md-12 col-sm-12 col-xs-12 trending-wrap">
+          <div class="border-bottom slider">
+            <nav class="all-videos">
+              <div class="draggable">
+                <!--  Demos -->
+                <section id="demos">
+                  <div class="row">
+                    <div class="large-12 columns">
+                      <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                       <div class="owl-stage-outer">
+                          <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 1.5s ease 0s; width: 2376px;">
+                            <% @naats.each do |naat| %> 
+                               <div class="owl-item active" style="width: 178px; margin-right: 20px;">
+                                  <div class="item">
+                                    <div class="video-all pinkish-color">
+                                      <%= link_to naat_path(naat) do %>
+                                        <div class="image-holder">
+                                          <%#= image_tag naat.photo_url(naat),  :class =>"img-responsive" %>
+                                        </div>
+                                        <strong class="title">
+                                              <%= naat.title %>
+
+                                        </strong>
+                                        <span class="author">by 
+                                            <%= naat.writername %>
+                                          <i class="fa fa-check-square" aria-hidden="true"></i></span>
+                                    <% end %>
+                                    </div>
+                                  </div>
+                               </div>
+                             <% end %>
+                       
+                          </div>
+                       </div>
+                     </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

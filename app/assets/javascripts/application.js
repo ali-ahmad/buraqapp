@@ -69,9 +69,10 @@
 //= require select2/select2-active
 //= require plugins
 //= require main
-//= require tawk-chat
 //= require bootstrap-tagsinput.min
 //= require readmore
 //= require mustache.min
 //= require show_ads
 //= require cocoon
+
+

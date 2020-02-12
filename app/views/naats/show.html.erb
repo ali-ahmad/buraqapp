@@ -1,40 +1,421 @@
-<div class="container-fluid">
-  <div class="row">
-  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <div class="tabbable tabs-left">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="palyer-container">
         <div class="row">
-          <div class="col-md-12">
-            <div class="tab-content">
+          <div class="col-md-8 col-sm-6 col-xs-12 p-0">
+            <div class="player-mole tab-content">
+
+
               <% @naat.naatlyrics.each do |naatlyrics| %>
-                  <div class="tab-pane fade <%= 'in active' if @naat.naatlyrics.first == naatlyrics %>" id="<%=(naatlyrics.title.gsub(/[0-9]+/, "")+naatlyrics.id.to_s).parameterize%>">
-                      <div class="naat-frame">
-                        <%= image_tag naatlyrics.photo&.url,  :class =>"img-responsive" %>
-                      </div>
-                     <div class="heding">
-                        <h1><%= naatlyrics.try(:title) %> </h1>
-                      </div> 
-                  </div>
+                <div class="tab-pane fade <%= 'in active' if @naat.naatlyrics.first == naatlyrics %>" id="<%=(naatlyrics.title.gsub(/[0-9]+/, "")+naatlyrics.id.to_s).parameterize%>">
+                    <div class="naat-frame">
+                      <%= image_tag naatlyrics.photo&.url,  :class =>"img-responsive" %>
+                    </div>
+                   <div class="heding">
+                      <h1><%= naatlyrics.try(:title) %> </h1>
+                    </div> 
+                </div>
               <% end %>
+              <div  id="home" class="tab-pane fade in active">
+                <div class="player-image">
+                  <img src="images/video-list-image.png" class="img-responsive" alt="Video images">
+                </div>
+                <div class="details-content">
+                  <div class="user-details">
+                    <div class="applicant-info">
+                      <a class="applicant-name" href="#">Program Type</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div  id="menu1" class="tab-pane fade">
+                <div class="player-image">
+                  <img src="images/video-list-image.png" class="img-responsive" alt="Video images">
+                </div>
+                <div class="details-content">
+                  <div class="user-details">
+                    <div class="applicant-info">
+                      <a class="applicant-name" href="#">Program Type 1</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div  id="menu2" class="tab-pane fade">
+                <div class="player-image">
+                  <img src="images/video-list-image.png" class="img-responsive" alt="Video images">
+                </div>
+                <div class="details-content">
+                  <div class="user-details">
+                    <div class="applicant-info">
+                      <a class="applicant-name" href="#">Program Type 2</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div  id="menu3" class="tab-pane fade">
+                <div class="player-image">
+                  <img src="images/video-list-image.png" class="img-responsive" alt="Video images">
+                </div>
+                <div class="details-content">
+                  <div class="user-details">
+                    <div class="applicant-info">
+                      <a class="applicant-name" href="#">Program Type 3</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="details-content">
+                <div class="title-area-nav-tabs">
+                  <ul class="nav nav-tabs">
+                    <% @naat.naatlyrics.each do |naatlyrics| %>
+                        <li><a href="#<%=(naatlyrics.title.gsub(/[0-9]+/, "")+naatlyrics.id.to_s).parameterize%>" data-toggle="tab">
+                         <%= naatlyrics.language.try(:name) %></a>
+                       </li>
+                    <% end %>
+                  </ul>
+
+
+                </div>
+                <div class="like-share-block">
+                  <div class="views"><p>408,789 views</p></div>
+                  <div class="like-share-inner">
+                    <div class="like">
+                      <a href="#" class="active"><i class="fa fa-thumbs-up" aria-hidden="true"></i>2.5k</a>
+                      <span class="i-like-this">
+                        <p>I like this</p>
+                      </span>
+                    </div>
+                    <div class="dislike">
+                      <a href="#"><i class="fa fa-thumbs-down" aria-hidden="true"></i>0</a>
+                      <span class="i-dislike-this">
+                        <p>I dislike this</p>
+                      </span>
+                    </div>
+                    <div class="share">
+                      <a href="#"><i class="fa fa-share" aria-hidden="true"></i>SHARE</a>
+                      <span class="i-share-this">
+                        <p>Share</p>
+                      </span>
+                    </div>
+                    <div class="save">
+                      
+                    </div>
+                    <div class="dropdown applicant-details-dorpdown">
+                      <button class="applicant-details-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                       <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#"><img src="images/property_archive.svg"> Archive</a></li>
+                        <li><a href="#"><img src="images/property_delete.svg"> Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="title-area border-bottom-none">
+                <div class="details-content">
+                  <div class="description">
+                    <div class="head">
+                      <div class="user-image">
+                        <img src="images/retina-check.jpg">
+                      </div>
+                      <strong class="title">Description
+                      <span class="published-date">Published on 16 Jul 2018</span>
+                      </strong>
+                    </div>
+                    <div class="details-section">
+
+                                 <%= @naat.description %>
+
+
+                   <!--    <p>Park 20 Apartments raises the bar and offers a new standard for apartment living. Here residents occupy spacious and modern studio, one- and two-bedroom apartments featuring custom interiors and designer finishes. Cook in a gourmet kitchen featuring Caesar Stone countertops and sleek stainless steel appliances. The subway tile backsplash and custom cabinetry create a clean and sophisticated appearance. This space also features a designer lighting package and beautiful hardwood style flooring, the perfect complement to a room that's been done to perfection.<p>
+                      <button id="myButton">show more</button>
+                      <p id="myText">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+                        <span class="display-block">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</span>
+                        <span class="display-block">HERE IS THE YOUR $10 DISCOUNT LINK (<a href="#" class="link-blue-color">https://it is a link.</a>)</span>
+                      Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. <button id="myButton">show less</button></p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+        
+               <%= render(partial: 'comments/comment')   %>
+
+
+
+        
+
+
+
+       
+
+
+
+
             </div>
           </div>
-          <div class="col-md-12">
-            <ul class="nav nav-pills nav-stacked">
-              <% @naat.naatlyrics.each do |naatlyrics| %>
-                  <li><a href="#<%=(naatlyrics.title.gsub(/[0-9]+/, "")+naatlyrics.id.to_s).parameterize%>" data-toggle="tab">
-                   <%= naatlyrics.language.try(:name) %></a>
-                 </li>
+          <div class="col-md-4 col-sm-6 col-xs-12 text-right">
+            <ul class="video-list">
+              <% @naats.sort_by{|t| - t.created_at.to_i}[0..10].each do |naat| %> 
+                <li>
+                  <%= link_to naat_path(naat) do %>
+                    <div class="row">
+         
+                      <div class="col-xs-4 col-md-4 p-right-0">
+                         <%#= image_tag naat.photo_url(naat),  :class =>"img-responsive" %>
+                      </div>
+                      <div class="col-xs-8 col-md-8 text-left">
+                       <strong class="video-title">
+                          <%= naat.title %>
+                       </strong>
+                        <p>by <%= naat.writername %></p>
+                        <em class="view-time">324 views   18 hours ago</em>
+                      </div>
+                    </div>
+                 
+                  <% end %>
+                </li>
               <% end %>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/40.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/47.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/62.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/65.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/71.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/76.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/80.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/10.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/12.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/16.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/19.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/21.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/40.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/47.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4 p-right-0">
+                      <img src="images/22.jpg" class="img-responsive">
+
+                    </div>
+                    <div class="col-xs-8 col-md-8  text-left">
+                     <strong class="video-title">Heart shaped leaf floating</strong>
+                      <p>by Every Interaction</p>
+                      <em class="view-time">324 views   18 hours ago</em>
+                    </div>
+                  </div>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-	  	<div class="discription-block">
-        <section id="demo">
-          <article>
-           <%= @naat.description %>
-          </article>
-        </section>
-        <script>
+    </div>
+
+
+
+
+ <script>
           $('#info').readmore({
             moreLink: '<a href="#">Usage, examples, and options</a>',
             collapsedHeight: 14,
@@ -47,8 +428,3 @@
 
           $('article').readmore({speed: 500});
         </script>
-	  	</div>
-    </div>
-
-	</div>
-</div>

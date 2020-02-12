@@ -1,0 +1,35 @@
+<div class="applicant all-events">
+  <div class="breadcome-area">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="breadcome-list">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-2 col-xs-12">
+                           <h1>Naat</h1>
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-xs-12 text-right">
+                          <div class="breadcome-heading sectioin-search-holder">
+                          	<%=form_tag(admin_naats_path, :class=>"sr-input-func page-search", method: :get) do |f| %>
+								              <%=text_field_tag'query', params[:query], :class=>"search-int form-control", placeholder:'Search..' %>
+								              <a href="#"><i class="fa fa-search"></i></a>
+										        <%end%>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="applicant all-events">
+		<%= render partial: "all_naats_show" %>
+	</div>
+</div>
+
+
+
+
+
+
+

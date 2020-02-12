@@ -7,6 +7,8 @@ ruby '2.6.3'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+# pg
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -25,8 +27,6 @@ gem 'jbuilder', '~> 2.5'
 # image uploader
 gem 'carrierwave', '~> 1.0'
 
-# searchkick
-gem 'searchkick'
 
 # devise
 gem 'devise'
@@ -41,6 +41,15 @@ gem "cocoon"
 gem "pundit"
 
 gem "simple_form"
+
+# pg search
+gem 'pg_search'
+
+
+# will_paginate
+gem 'will_paginate', '~> 3.1', '>= 3.1.7'
+
+
 
 
 # Use Redis adapter to run Action Cable in production

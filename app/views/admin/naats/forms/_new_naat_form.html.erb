@@ -1,0 +1,142 @@
+<div class="single-pro-review-area mt-t-30 mg-b-15">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="product-payment-inner-st">
+          <ul id="myTabedu1" class="tab-review-design">
+            <li class="active"><a href="#clientdetails">Naats</a></li>
+            <li><a href="#organization">Naats Languages</a></li>
+          </ul>
+            <div id="myTabContent" class="tab-content custom-product-edit">
+              <div class="product-tab-list tab-pane fade active in" id="clientdetails"> 
+                <%= form_for(@naat, url: submit_naat_path(@naat), method: method_type(@naat), :html => {:class => 'add-professors', id:"demo1-upload" }) do |f| %>
+
+
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="review-content-section">
+                        <div class="row">
+                          <div class="col-lg-6 col-md-6 col-xs-12">
+                            <div class="form-group alert-up-pd">
+                              <div class="dropzone dropzone-custom needsclick addcourse dropzone-custom-naat" id="demo1-upload">
+                                <div id="dropzone1" class="pro-ad addcoursepro">
+                                  <div class="form-group alert-up-pd">
+                                    <div class="dz-message needsclick download-custom">
+                                      <i class="fa fa-download edudropnone" aria-hidden="true"></i>
+                                      <h2 class="edudropnone">Drop image here or click to upload.</h2>
+                                      <p class="edudropnone"><span class="note needsclick">(This is just a demo dropzone. Selected image is <strong>not</strong> actually uploaded.)</span>
+                                      </p>
+                                        <%= image_tag(@naat.photo_url) if @naat.photo? %>
+                                        <%= f.file_field :photo, required: true,  :class=>'hd-pro-img'  %>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-md-6 col-xs-12">
+                              <div class="form-group">
+                                <%= f.text_field :title, :class =>"form-control", required: true, placeholder:'Title'  %>
+                              </div>
+                              <div class="form-group">
+                                <%= f.text_field :writername, :class =>"form-control", placeholder:'Writer' %>
+                              </div>
+                              <div class="form-group">
+                                <div class="input-mark-inner mg-b-22">
+                                  <%= f.text_field :videolink, :class =>"form-control", placeholder:'Video Link' %>
+                                  <span class="help-block"></span>                                  
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <%= f.text_field :audiolink, :class =>"form-control", placeholder:'Audio Link' %>
+                              </div>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                          <%= f.text_area :description, :class =>"form-control", placeholder:'Description' %>
+                        </div>
+                        <div class="form-group">
+                          <%= f.url_field :webSite, :class =>"form-control", placeholder:'Website Name' %>
+                        </div>
+                        <div class="form-group">
+                          <%#= f.text_field :tags, :class =>"form-control", placeholder:'Tags', "data-role" => "tagsinput" %>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="btnarea-holder">
+                              <% if @naat.persisted?  %>
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">Update</button>
+                                <a class="btn btn-primary waves-effect waves-light btnNext" >Next</a>
+                                <% else %>
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+                              <% end %>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="product-tab-list tab-pane fade" id="organization"> 
+                <%= @naat.persisted? %>
+                <%= form_for(@naat, url: submit_naat_path(@naat), method: method_type(@naat), :html=> {:class => 'add-professors', id:"demo1-upload" }) do |f| %>
+                  <div id='tasks'>
+                    <%= f.fields_for :naatlyrics do |naatlyric| %>
+                      <%= render 'admin/naats/forms/naatlyrics_fields', :f => naatlyric %>
+                    <% end %>
+                    <div class='links'>
+                      <%= link_to_add_association 'Add Question', f, :naatlyrics, partial: 'admin/naats/forms/naatlyrics_fields' %>
+                    </div>
+                  </div>
+                   <div class="row">
+                      <div class="col-lg-12">
+                        <div class="btnarea-holder">
+                          <a class="btn btn-primary waves-effect waves-light btnPrevious" >Previous</a>
+
+                            <%= f.submit :class=>"btn btn-primary waves-effect waves-light" 'Save' %>
+
+                          <button type="submit" >Save</button>
+                        </div>
+                      </div>
+                    </div>
+                <% end %>
+              </div> 
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style type="text/css">
+  
+  #dropzone1  input[type="file"] {
+        display: block;
+      height: 180px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  #demo1-upload {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  .imageThumb {
+    max-height: 200px;
+    border: 2px solid;
+    padding: 1px;
+    cursor: pointer;
+    width: 100%;
+    background-size: cover;
+  }
+</style>
+

@@ -1,0 +1,149 @@
+.fullListenHero {
+	position: relative;
+	height: 380px;
+	overflow: hidden;
+	background: #e5e5e5;
+	margin-bottom: 25px;
+}
+.video-list {
+	margin: 0;
+}
+.fullHero__foreground {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 30px 30px 20px 30px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.sound__artwork {
+  position: relative;
+  margin-left: 15px;
+  background: #fff;
+	width: 340px;
+	height: 340px;
+}
+.sound__coverArt {
+  background: center center/contain no-repeat;
+  display: block;
+	width: 340px;
+	height: 340px;
+  background: #abdd25 !important;
+  z-index: 2;
+}
+.sound__header {
+  position: relative;
+  margin: 0 0 245px 0;
+  padding-top: 0;
+  min-height: 35px;
+  z-index: 2;
+  float: left;
+  width: 100%;
+}
+.playbutton-area {
+	display: table;
+	width: 100%;
+}
+.button-play {
+	display: inline-block;
+	vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  background: #738C1B url("../images/btn-play.svg") no-repeat center;
+  border-radius: 100%;
+  overflow: hidden;
+  text-indent: -9999px;
+  margin-right: 10px;
+}
+.sound__header .title {
+	font-size: 15px;
+	line-height: 1.2;
+	color: #333;
+	display: inline-block;
+	vertical-align: middle;
+}
+.sound__content {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.sceneLayer {
+  height: 60px;
+  background: #738C1B; 
+  margin-bottom: 9px;
+  float: left;
+  width: 100%;
+}
+.conment-form {
+	border-radius: 0 4px 4px 0;
+	border-left: none;
+	float: left;
+	width: 100%;
+}
+.commentForm__wrapper {
+  padding: 5px;
+  background: #f2f2f2;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+.commentForm.m-small .commentForm__inputWrapper {
+  margin-left: 20px;
+}
+.commentForm__inputWrapper {
+  position: relative;
+  font-size: 12px;
+  line-height: 16px;
+}
+.btn-conment {
+	color: #333;
+	outline: 0;
+	font-size: 11px;
+	padding: 2px 9px 2px 8px;
+	height: 22px;
+	line-height: 16px;
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	background-color: #fff;
+	cursor: pointer;
+	white-space: nowrap;
+	text-align: center;
+	box-sizing: border-box;
+	min-width: 25px;
+	margin-right: 5px;
+}
+.conment-form .form-control {
+	width: 100%;
+  background: #fff;
+  padding: 0 9px;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+  height: 30px;
+  border: 1px solid #e5e5e5;
+}
+.social-area {
+	display: flex;
+	margin-top: 3px;
+	align-items: center;
+} 
+.social-area .btn-area {
+	width: 70%;
+	margin-right: 15px;
+	padding: 0;
+}
+.social-area .status-area {
+	text-align: right;
+	width: 28%;
+}
+.social-area .status-area a:first-child{
+	margin-right: 15px;
+}
